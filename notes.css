@@ -1,0 +1,45 @@
+body {
+    /* position: relative; */
+    margin: 0, auto;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+}
+
+#addToDoList {
+    margin: 0, auto;
+    /* background-color:lightgray; */
+   text-align: center;
+}
+
+#toDoList {
+    margin: 0, auto;
+    width: 40%;
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:whitesmoke;
+
+}
+ ul li{
+    list-style-type: none;
+    margin-top: 10px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+
+ itemList {
+     /* text-align: center; */
+     margin: 0, auto;
+ }
+ input {
+    text-align: left;
+ }
+
+.complete {
+     text-decoration: line-through;
+     color: lightslategray;
+ }
