@@ -53,7 +53,6 @@ var changeStyle = function (elem, attr, val) {
  * using primitive javascript
  * **/
 window.onload = function () {
-    alert("!!");
 	var buttons = document.getElementsByClassName("attribute");
 	var container = document.getElementById("container")
 	var attributes = ["width", "height", "background-color", "display", "display"];
