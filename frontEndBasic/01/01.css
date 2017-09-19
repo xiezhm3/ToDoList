@@ -1,0 +1,19 @@
+body {
+    margin:0 auto;
+    /*background-color: beige;*/
+}
+.attributes {
+    margin: 100px auto;
+    width: 50%;
+    height: auto;
+    text-align: center;
+    /*cursor: cell;*/
+    /*background-color: darkred;*/
+}
+.container {
+    margin: 10px auto;
+    padding: 20px;
+    width:100px;
+    height:80px;
+    background-color: darkred;
+}
