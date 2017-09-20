@@ -1,0 +1,54 @@
+body {
+    margin: 0 auto;
+}
+
+.controller {
+    width: 300px;
+    margin: 10px auto;
+}
+
+.red, .green, .black {
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+    display: inline-block;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.black {
+    background-color: black;
+}
+
+.navigator-list {
+
+}
+
+.navigator {
+    width: 700px;
+    margin: 0 auto;
+}
+
+.nav {
+    /*border-width: 5px;*/
+    border: 2px solid whitesmoke;
+    text-align: center;
+    list-style-type: none;
+    text-decoration: none;
+    display: inline-block;
+    height: 30px;
+    width: 100px;
+    background-color: green;
+    line-height: 2em;
+}
+
+.news, .amusement, .sports, .films, .musics, .travels {
+    text-decoration: none;
+    color: white;
+}
