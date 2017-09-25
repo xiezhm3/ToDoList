@@ -38,4 +38,21 @@ $(function () {
 			"display": "none"
 		});
 	});
+
+	$(".sumBtn").on("click", function (e) {
+		e.preventDefault();
+		var numberString = $(".sumUpNumber").val();
+		var ns = numberString.split(",");
+		var sum = sumUpNumbers(ns);
+		alert(sum)
+	});
+
+	
+	var sumUpNumbers = function (number) {
+		var sum = 0;
+		for (var num in number) {
+			sum += parseInt(number[num]);
+		}
+		return sum;
+	}
 });
