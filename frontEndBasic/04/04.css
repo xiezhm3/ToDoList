@@ -10,7 +10,7 @@ body {
 
 #box > .list > ul {
     position: relative;
-    top:-172px;
+    /*top:-172px;*/
 }
 
 li {
