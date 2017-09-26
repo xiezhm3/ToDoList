@@ -1,0 +1,68 @@
+body, div, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0 auto;
+    background-color: beige;
+}
+
+#box > .list > ul {
+    position: relative;
+    top:-172px;
+}
+
+li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+#box {
+    position: relative;
+    width: 490px;
+    height: 170px;
+    margin: 10px auto;
+    background-color: yellow;
+    border-radius: 6px;
+    border: 8px solid #fff;
+    cursor: pointer;
+}
+
+.list {
+    position: relative;
+    width: 492px;
+    height: 172px;
+    overflow: hidden;
+}
+
+/*img {*/
+    /*position: relative;*/
+    /*top:-172px;*/
+/*}*/
+
+#box > .count {
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+    color: #ffffff;
+}
+
+#box > .count > li {
+    filter: alpha(opacity=80);
+    opacity: 0.7;
+    border-radius: 20px;
+    background: #F90;
+    float: left;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    margin-right: 5px;
+}
+#box .count li.current {
+    opacity: 1;
+    color: #fff;
+    font-weight:700;
+    filter: alpha(opacity=100);
+    background-color: #f60;
+}
