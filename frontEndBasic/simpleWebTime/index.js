@@ -1,5 +1,7 @@
 window.onload = function () {
+
     var autoTimer = setInterval(function () {
+
         var hourElement = document.getElementsByClassName("hour")[0];
         var minuteElement = document.getElementsByClassName("minute")[0];
         var secondElement = document.getElementsByClassName("second")[0];
@@ -21,6 +23,7 @@ window.onload = function () {
 //        };
     // use event listener
     var plusOne = document.getElementsByClassName("plusOne")[0];
+
     plusOne.addEventListener("click", function (e) {
         var newVal = parseInt(e.target.getAttribute("value")) + 1;
         if (newVal < 10) {
