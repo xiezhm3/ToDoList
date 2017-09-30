@@ -17,6 +17,15 @@
 <div class="plusOne">
     <input type="button" value="0" class="btn">
 </div>
+<div class="compareNumbers">
+    <input type="text" value="" class="n1">
+    <p class="vs"> VS </p>
+    <input type="text" value="" class="n2">
+    <input type="button" value="Compare" class="compareBtn">
+    <div class="result">
+        <!--<h2>Result: </h2>-->
+    </div>
+</div>
 </body>
 <script>
     window.onload = function () {
@@ -48,6 +57,25 @@
                 newVal = "0" + newVal;
             }
             e.target.setAttribute("value", newVal.toString());
+        }, false);
+
+        var result = document.getElementsByClassName("result")[0];
+        var compareBtnElem = document.getElementsByClassName("compareBtn")[0];
+        var input1 = document.getElementsByClassName("n1")[0];
+        var input2 = document.getElementsByClassName("n2")[0];
+        [input1, input2].forEach(function (i) {
+            i.onkeyup = function () {
+                this.value = this.value.replace(/[^\d]/, ""); // force to enter Number
+            };
+        });
+        compareBtnElem.addEventListener("click", function () {
+            if (input1.value === "" || input2.value === "") {
+                alert("input number please.");
+                result.innerHTML = "";
+                return;
+            }
+            var o = Math.max(parseInt(input1.value), parseInt(input2.value));
+            result.innerHTML = "<h2>Result: " + o + "</h2>";
         }, false);
     };
 </script>

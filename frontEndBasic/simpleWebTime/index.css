@@ -18,6 +18,9 @@ p {
     left: 30px;
     top: 30px;
 }
+.vs {
+    color: #000;
+}
 
 input {
     text-align: center;
@@ -40,4 +43,28 @@ input {
     margin:0 auto;
     width:100px;
     border: 2px solid black;
+}
+
+.compareNumbers {
+    width: 500px;
+    height:300px;
+    /*background-color: #FF9900;*/
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.compareBtn {
+    width: 100px;
+    height: 50px;
+    vertical-align: middle;
+    display: inline;
+}
+
+.result {
+    /*display: inline;*/
+    width: 200px;
+    height: 100px;
+    /*background: #fff;*/
+    margin: 70px auto;
 }
