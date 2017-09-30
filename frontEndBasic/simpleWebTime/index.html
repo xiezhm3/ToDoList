@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>simple web time</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+<div class="container">
+    <input type="text" value="09" class="hour"><p> Hour </p>
+    <input type="text" value="09" class="minute"><p> Minute </p>
+    <input type="text" value="09" class="second"> <p>Second</p>
+</div>
+</body>
+<script>
+    window.onload = function() {
+        var autoTimer = setInterval(function () {
+            var hourElement = document.getElementsByClassName("hour")[0];
+            var minuteElement = document.getElementsByClassName("minute")[0];
+            var secondElement = document.getElementsByClassName("second")[0];
+            var date = new Date();
+            var hour = date.getHours();
+            var minutes = date.getMinutes();
+            var seconds = date.getSeconds();
+            hourElement.setAttribute("value", hour);
+            minuteElement.setAttribute("value", minutes);
+            secondElement.setAttribute("value", seconds);
+        }, 30);
+    };
+</script>
+</html>

@@ -1,0 +1,30 @@
+body {
+    margin: 10px auto;
+    padding: 0;
+}
+
+.container {
+    border: 2px solid gold;
+    margin: 0 auto;
+    width: 333px;
+    height: 80px;
+    background-color: black;
+}
+
+p {
+    display: inline;
+    color: #fff;
+    position: relative;
+    left: 20px;
+    top: 30px;
+}
+
+input {
+    text-align: center;
+    position: relative;
+    top: 30px;
+    left: 20px;
+    border: 2px solid gold;
+    width: 30px;
+    margin: 0 auto;
+}
