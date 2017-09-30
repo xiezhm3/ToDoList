@@ -7,13 +7,19 @@
 </head>
 <body>
 <div class="container">
-    <input type="text" value="09" class="hour"><p> Hour </p>
-    <input type="text" value="09" class="minute"><p> Minute </p>
-    <input type="text" value="09" class="second"> <p>Second</p>
+    <input type="text" value="09" class="hour">
+    <p> Hour </p>
+    <input type="text" value="09" class="minute">
+    <p> Minute </p>
+    <input type="text" value="09" class="second">
+    <p>Second</p>
+</div>
+<div class="plusOne">
+    <input type="button" value="0" class="btn">
 </div>
 </body>
 <script>
-    window.onload = function() {
+    window.onload = function () {
         var autoTimer = setInterval(function () {
             var hourElement = document.getElementsByClassName("hour")[0];
             var minuteElement = document.getElementsByClassName("minute")[0];
@@ -26,6 +32,23 @@
             minuteElement.setAttribute("value", minutes);
             secondElement.setAttribute("value", seconds);
         }, 30);
+//        var plusOneBtn = document.getElementsByClassName("btn")[0];
+//        plusOneBtn.onclick = function () {
+//            var newValue = parseInt(plusOneBtn.getAttribute("value")) + 1;
+//            if (newValue < 10) {
+//                newValue = "0" + newValue; // when the number less then 10, show the 01 format
+//            }
+//            plusOneBtn.setAttribute("value", newValue);
+//        };
+        // use event listener
+        var plusOne = document.getElementsByClassName("plusOne")[0];
+        plusOne.addEventListener("click", function (e) {
+            var newVal = parseInt(e.target.getAttribute("value")) + 1;
+            if (newVal < 10) {
+                newVal = "0" + newVal;
+            }
+            e.target.setAttribute("value", newVal.toString());
+        }, false);
     };
 </script>
 </html>
