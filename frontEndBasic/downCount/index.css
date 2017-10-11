@@ -1,0 +1,71 @@
+body {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.downCount {
+    width: 500px;
+    height: 300px;
+    margin: 0 auto;
+    background: #000;
+
+}
+
+.minute, .second{
+    position: relative;
+    left: 180px;
+    top: 100px;
+    width: 40px;
+    display: inline;
+}
+.operation {
+    position: relative;
+    left: 40px;
+
+}
+.startBtn {
+    margin:10px auto;
+    position: relative;
+    padding: 10px;
+    left:180px;
+    width: 150px;
+    background-color: green;
+    border:none;
+    font-size: larger;
+}
+.stopBtn {
+    margin:10px auto;
+    position: relative;
+    padding: 10px;
+    left:180px;
+    width: 150px;
+    background-color: red;
+    border:none;
+    font-size: larger;
+}
+
+.resetBtn {
+    margin:10px auto;
+    position: relative;
+    padding: 10px;
+    border: 2px solid red;
+    left:180px;
+    width: 150px;
+    background-color: gold;
+    border:none;
+    font-size: larger;
+}
+
+p {
+    position: relative;
+    left:180px;
+    top: 100px;
+    display: inline;
+    color: #ffffff;
+}
+.operation {
+    /*background-color: #FF9900;*/
+    position: relative;
+    left: 0;
+    top: 150px;
+}
