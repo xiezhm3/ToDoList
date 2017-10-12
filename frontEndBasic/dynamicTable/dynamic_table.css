@@ -22,6 +22,12 @@ input {
     color: #ffffff;
 }
 
+.message {
+    font-size: 1.8em;
+    text-align: center;
+    margin: 10px auto;
+}
+
 .container {
     margin: 10px auto;
 }
@@ -30,9 +36,19 @@ table {
     margin: 10px auto;
     border: 1px solid black;
 }
+
 td {
-    width: 12px;
+    width: 20%; /*set the stable width for the table data*/
     font-size: 2em;
     text-align: center;
     color: white;
+    padding: 5px;
+    word-wrap: break-word;
+}
+
+.message em {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin: -6px 9px;
 }

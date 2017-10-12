@@ -14,6 +14,7 @@
     <input class="column" type="text" value="">
     <input class="create-btn" type="button" value="create a table">
 </div>
+<div class="message"></div>
 <div class="container"></div>
 
 <script>
@@ -22,11 +23,11 @@
         var colNum = document.getElementsByClassName("column")[0];
         var createBtn = document.getElementsByClassName("create-btn")[0];
         var container = document.getElementsByClassName("container")[0];
-        var bgcolor = 0;
+        var message = document.getElementsByClassName("message")[0];
 
         this.getRandomColor = function () {
             var hex = Math.floor(Math.random() * 16777216).toString(16);
-            while(hex.length < 6) {
+            while (hex.length < 6) {
                 hex = "0" + hex;
             }
             return "#" + hex;
@@ -37,7 +38,6 @@
         };
 
         var createTable = function (rows, columns) {
-            var fragment = document.createDocumentFragment();
             var columnList = [];
             var rowList = [];
             for (var i = 0; i < rows; i++) {
@@ -56,6 +56,16 @@
             createTable(rowNum.value, colNum.value);
         }, false);
 
+        container.addEventListener("click", function (e) {
+            e = e || event;
+            var t = e.target || e.srcElement;
+            if (t.tagName.toUpperCase() === "TD") {
+                message.style.display = "block";
+                message.innerHt = "";
+                message.innerHTML = "<span>The Number You Choose is: " + t.innerHTML + ", Color is:" +
+                    "</span><em style=\"background:" + t.style.backgroundColor + ";\"></em><span>" + t.style.backgroundColor + "</span>";
+            }
+        }, false)
     })();
 </script>
 </body>
