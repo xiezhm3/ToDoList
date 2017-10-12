@@ -1,0 +1,83 @@
+body {
+    margin: 10px auto;
+    color: #4f4f4f;
+    font: 14px/1.5 \5fae\8f6f\96c5\9ed1;
+}
+
+.container {
+    width: 300px;
+    background-color: gainsboro;
+    margin: 0 auto;
+}
+
+form {
+    width: 300px;
+    background: #fef4eb;
+    border: 2px solid #f60;
+    padding-bottom: 10px;
+    overflow: hidden;
+    zoom: 1;
+    margin: 10px auto;
+}
+
+.login {
+    text-align: center;
+}
+input {
+    /*background-color: lightpink;*/
+}
+
+form .f-text-high {
+    background-position: 0 -31px;
+}
+
+form .f-submit {
+    clear: both;
+    position: relative;
+    left: 33%;
+    color: #fff;
+    width: 104px;
+    height: 31px;
+    cursor: pointer;
+    font-size: 16px;
+    background: #f60;
+    line-height: 31px;
+    border-radius: 5px;
+}
+
+form p {
+    float: left;
+    clear: both;
+    width: 100%;
+    height: 31px;
+    margin-top: 10px;
+    line-height: 31px;
+}
+form input {
+    border: 1px solid #f60;
+    margin-left:5px;
+    margin-top: 6px;
+    border-radius: 5px;
+    font-family: \5fae\8f6f\96c5\9ed1;
+    /*background: url(img/input.png) no-repeat;*/
+}
+
+form label, form input {
+    float: left;
+}
+
+form label {
+    width: 100px;
+    height: 31px;
+    text-align: right;
+}
+
+form h2 {
+    color: #fe791e;
+    text-align: left;
+    font-size: 16px;
+    background: #ffebd7;
+    border-bottom: 2px solid #f60;
+    padding: 0;
+    margin: 8px auto;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Login Page</title>
+    <!--<link href="index.css" rel="stylesheet">-->
+    <style>
+        body {
+            margin: 10px auto;
+            color: #4f4f4f;
+            font: 14px/1.5 \5fae\8f6f\96c5\9ed1;
+        }
+        body,form,h2,p,input {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin: 10px auto;
+            width: 400px;
+        }
+
+        h2 {
+            color: #f60;
+            margin: 3px auto;
+            border-bottom: 2px solid #f60;
+        }
+
+        form {
+            width: 333px;
+            border: 2px solid #f60;
+            background-color: #fef4eb;
+        }
+
+        form p {
+            /*float: left;*/
+            /*clear: both;*/
+            width: 100%;
+            height: 31px;
+            margin-top: 10px;
+            line-height: 31px;
+        }
+        form label {
+            text-align: right;
+            width: 333px;
+            height: 31px;
+        }
+
+        form input, form label {
+            /*float: left;*/
+        }
+
+        form .f-text,form .f-text-high {
+            width: 203px;
+            height: 31px;
+            padding-left: 5px;
+            line-height: 31px;
+        }
+        form .f-submit {
+            width: 102px;
+            height: 32px;
+            line-height:32px;
+            font-size: 1.5em;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+            background-color: #f60;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <form class="login">
+        <h2>User Login</h2>
+        <p>
+            <label>User Name: </label>
+            <input class="f-text" type="text">
+        </p>
+        <p>
+            <label>Password: </label>
+            <input class="f-text" type="password">
+        </p>
+        <p>
+            <input class="f-submit" type="submit" value="Login">
+        </p>
+    </form>
+</div>
+</body>
+</html>
