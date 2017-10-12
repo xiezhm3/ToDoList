@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic Create Table</title>
+    <link rel="stylesheet" href="./dynamic_table.css">
+    <script type="text/javascript" src="./dynamic_table.js"></script>
+</head>
+<body>
+<div class="create">
+    <label>rows: </label>
+    <input class="row" type="text" value="">
+    <label>columns: </label>
+    <input class="column" type="text" value="">
+    <input class="create-btn" type="button" value="create a table">
+</div>
+<div class="container"></div>
+
+<script>
+    (function () {
+        var rowNum = document.getElementsByClassName("row")[0];
+        var colNum = document.getElementsByClassName("column")[0];
+        var createBtn = document.getElementsByClassName("create-btn")[0];
+        var container = document.getElementsByClassName("container")[0];
+        var bgcolor = 0;
+
+        this.getRandomColor = function () {
+            var hex = Math.floor(Math.random() * 16777216).toString(16);
+            while(hex.length < 6) {
+                hex = "0" + hex;
+            }
+            return "#" + hex;
+        };
+
+        this.getRandomRange = function (from, to) {
+            return Math.floor(Math.random() * (to - from + 1) + from);
+        };
+
+        var createTable = function (rows, columns) {
+            var fragment = document.createDocumentFragment();
+            var columnList = [];
+            var rowList = [];
+            for (var i = 0; i < rows; i++) {
+                columnList.length = 0; // empty the column list
+                for (var j = 0; j < columns; j++) {
+                    this.bgColor = this.getRandomColor();
+                    columnList.push("<td style = \"background-color: " + this.bgColor + "; \">" + this.getRandomRange(1, 15) + "</td>");
+                }
+                rowList.push("<tr>" + columnList.join("") + "</tr>");
+            }
+            container.innerHTML = "<table><tbody>" + rowList.join("") + "</tbody></table>";
+
+        };
+
+        createBtn.addEventListener("click", function (e) {
+            createTable(rowNum.value, colNum.value);
+        }, false);
+
+    })();
+</script>
+</body>
+</html>
