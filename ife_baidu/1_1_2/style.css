@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+body {
+    margin: 0 auto;
+    background-color: black;
+}
+h1 {
+    /*padding: 10px;*/
+    margin: 30px;
+}
+h2 {
+    margin:30px;
+}
+#container {
+    width: 80%;
+    /*height: 200px;*/
+    margin: 0 auto;
+    background-color: lightgrey;
+}
+
+#header {
+    height: 100px;
+    background-color: lightcyan;
+}
+
+.baiduLogo {
+    height: 100px;
+    float: left;
+}
+
+.navigator li {
+    height: 100px;
+    width: 120px;
+    /*text-align: center;*/
+    /*background-color: #FF9900;*/
+    margin: 0 10px;
+    list-style-type: none;
+    float: right;
+}
+a:hover {
+    color: #ffffff;
+}
+
+.navigator a {
+    display: block;
+    width: 120px;
+    margin: 40px 10px;
+    border-left:2px solid black;
+    padding-left: 10px;
+    /*background-color: red;*/
+    text-decoration: none;
+    vertical-align: middle;
+}
+.author_inf {
+    margin: 30px;
+}
+.author_inf p {
+    display: inline;
+}
+#contents {
+    margin:20px 20px;
+}
+#contents img {
+    margin:10px 20px;
+}
+.content {
+    margin: 10px auto;
+    background-color: white;
+}
+.programs {
+    list-style-type: none;
+}
+.pic {
+    border: 1px solid black;
+    width: 200px;
+    text-align: center;
+    margin: 10px 60px;
+}
+.pic img {
+    margin: -10px 0;
+    width: 180px;
+    text-align: center;
+}
+.rang {
+    margin: 20px 30px;
+    line-height: 30px;
+}
+.table_test {
+    /*border:1px solid black;*/
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 90%;
+}
+.table_test th {
+    background: #000;
+    color: #ffffff;
+}
+table th, table td {
+    border:1px solid black;
+}
+.table_sum th, .table_sum td {
+    border:1px solid grey;
+    background-color: grey;
+}
+.content .note {
+    border-left: 3px solid grey;
+}
+.content .input_area {
+    margin: 30px auto;
+}
