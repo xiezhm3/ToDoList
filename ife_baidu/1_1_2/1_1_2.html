@@ -79,20 +79,20 @@
         <div class="content">
             <h1>Pictures</h1>
             <div class="pic">
-                <span>Gakki</span>
-                <img src="gakki_01.png">
+                <p>Gakki</p>
+                <img src="gakki_01.png" alt="Gakki">
             </div>
             <div class="pic">
-                <span>Gakki</span>
-                <img src="gakki_02.png">
+                <p>Gakki</p>
+                <img src="gakki_02.png" alt="Gakki">
             </div>
             <div class="pic">
-                <span>Gakki</span>
-                <img src="gakki_03.png">
+                <p>Gakki</p>
+                <img src="gakki_03.png" alt="Gakki">
             </div>
             <div class="pic">
-                <span>Gakki</span>
-                <img src="gakki_04.png">
+                <p>Gakki</p>
+                <img src="gakki_04.png" alt="Gakki">
             </div>
         </div>
         <div class="content">
@@ -151,39 +151,53 @@
         <div class="content">
             <h1 class="note">&nbsp;&nbsp;Here is a side bar in the future, this is the head of the side bar</h1>
             <div class="input_area">
-                <form>
-                    <span>Please input E-mail:</span>
-                    <input type="text" placeholder="xxx@xxx.com"><br>
-                    <span>the email address must be in the right format.</span><br>
-                    <span>Password:</span>
-                    <input type="password"> <br>
-                    <span>Password again:</span>
-                    <input type="password"> <br>
-                    <span>the password must be 6-16 number or English</span>
+                <form action="#" method="get">
+                    <div class="form-control">
+                        <label for="email">Name: </label>
+                        <input id="name" type="text">
+                    </div>
+                    <div class="form-control">
+                        <label for="email">E-mail: </label>
+                        <input id="email" type="email">
+                    </div>
+                    <div class="form-control">
+                        <label for="email">Password: </label>
+                        <input id="password" type="password">
+                    </div>
 
-                    <span>Sex:</span>
-                    Male<input type="radio" value="male" name="Sex">
-                    Woman<input type="radio" value="female" name="Sex">
-                    <br>
-                    <span>City: </span>
-                    <select name="city">
-                        <option value="Beijing">Beijing</option>
-                        <option value="Shanghai">Shanghai</option>
-                        <option value="Guangzhou">Guangzhou</option>
-                        <option value="Shenzhen">Shenzhen</option>
-                    </select>
-                    <br>
-                    <span>Hobby: </span>
-                    <input type="checkbox" name="Sports">Sports
-                    <input type="checkbox" name="Arts">Arts
-                    <input type="checkbox" name="Sciences">Sciences
-                    <br>
-                    <span>Personal description:</span>
-                    <textarea>This is a multiple line input area, please enter your personal information.</textarea>
+                    <!--<label>the email address must be in the right format.</label><br>-->
+                    <!--<label>Password:</label>-->
+                    <!--<input type="password">-->
+                    <!--<label>Password again:</label>-->
+                    <!--<input type="password">-->
+                    <!--&lt;!&ndash;<span>the password must be 6-16 number or English</span>&ndash;&gt;-->
+
+                    <!--<label>Sex:</label>-->
+                    <!--Male<input type="radio" value="male" name="Sex">-->
+                    <!--Woman<input type="radio" value="female" name="Sex">-->
+                    <!--<br>-->
+                    <!--<label>City: </label>-->
+                    <!--<select name="city">-->
+                        <!--<option value="Beijing">Beijing</option>-->
+                        <!--<option value="Shanghai">Shanghai</option>-->
+                        <!--<option value="Guangzhou">Guangzhou</option>-->
+                        <!--<option value="Shenzhen">Shenzhen</option>-->
+                    <!--</select>-->
+                    <!--<br>-->
+                    <!--<label>Hobby: </label>-->
+                    <!--<input type="checkbox" name="Sports">Sports-->
+                    <!--<input type="checkbox" name="Arts">Arts-->
+                    <!--<input type="checkbox" name="Sciences">Sciences-->
+                    <!--<br>-->
+                    <!--<span>Personal description:</span>-->
+                    <!--<textarea>This is a multiple line input area, please enter your personal information.</textarea>-->
                 </form>
-                <input type="submit" value="Submit">
+                <!--<input type="submit" value="Submit">-->
             </div>
         </div>
+    </div>
+    <div id="sidebar">
+        <p></p>
     </div>
     <div id="footer"></div>
 </div>
