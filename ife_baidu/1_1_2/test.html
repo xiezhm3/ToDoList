@@ -3,8 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        body {
+            margin: 20px auto;
+        }
+
+        #text-form {
+            width: 750px;
+            float: right;
+        }
+
+        .container {
+            margin: 2rem;
+            padding: 2rem;
+            background-color: white;
+            border: #9e9e9e 1px solid;
+            box-shadow: #000000 1px 1px 1px;
+        }
+
+        div.form-control {
+            margin: 0;
+            padding: 0;
+            padding-bottom: 1.25em;
+        }
+
+        div.form-control label {
+            margin: 0;
+            padding: 0;
+            display: block;
+            font-size: 100%;
+            padding-top: .1em;
+            padding-right: .25em;
+            width: 6em;
+            text-align: right;
+            float: left;
+        }
+
+        form #submit-button {
+            /*clear: both;*/
+            /*margin: 0 auto;*/
+            /*text-align: center;*/
+        }
+    </style>
 </head>
 <body>
-
+<div id="text-form">
+    <div class="container">
+        <p>form</p>
+        <form action="#" method="get">
+            <div class="form-control">
+                <label for="fname">First Name: </label>
+                <input id="fname" type="text">
+            </div>
+            <div class="form-control">
+                <label for="lname">Last Name: </label>
+                <input id="lname" type="text">
+            </div>
+            <div class="form-control">
+                <label for="email">E-mail: </label>
+                <input id="email" type="email">
+            </div>
+            <input type="submit" value="Submit" id="submit-button">
+        </form>
+    </div>
+</div>
 </body>
 </html>
