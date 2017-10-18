@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>任务三：三栏式布局</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .left, .center, .right {
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+        .left {
+            position: absolute;
+            left:0;
+            top:0;
+            width: 200px;
+            background-color: #4f4f4f;
+        }
+        .right {
+            position: absolute;
+            right:0;
+            top:0;
+            width: 200px;
+            background-color: #4f4f4f;
+        }
+        .center {
+            background-color: #fe791e;
+            margin:0 210px;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div class="left">Left</div>
+    <div class="right">Right</div>
+    <div class="center">Center</div>
+
+</div>
+</body>
+</html>
