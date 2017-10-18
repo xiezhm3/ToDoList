@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+body {
+    margin: 0 auto;
+    background-color: antiquewhite;
+}
+
+#container {
+    margin: 0 auto;
+    width: 980px;
+    height: 1386px;
+    background-color: white;
+}
+
+#header, #bodyer, #footer {
+    margin: 0 44px;
+}
+
+#header {
+    /*background-color: wheat;*/
+    height: 61px;
+    border-bottom: 2px solid #938e8c;
+}
+
+#bodyer {
+    /*background-color: #aecff7;*/
+    height: 1264px;
+}
+
+#footer {
+    /*background-color: #FF9900;*/
+    height: 61px;
+    border-top: 1px solid #939e8c;
+}
+
+#zhujiao {
+    float: right;
+    color: #d45d5c;
+    margin-top: 5px;
+}
+
+#header .logo {
+    float: left;
+    text-decoration: none;
+    width: 110px;
+    height: 61px;
+    background-color: darkred;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.ife_link {
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    line-height: 61px;
+}
+
+.timer {
+    /*background-color: #FF9900;*/
+    float: right;
+    margin-top: 20px;
+    color: #d45d5c;
+}
+
+#inherit_pic {
+    background-color: lightgray;
+    width: 641px;
+    height: 301px;
+    float: left;
+    margin: 10px 0;
+}
+
+#about_tech {
+    float: right;
+    background-color: #aecff7;
+    width: 203px;
+    height: 301px;
+    margin: 10px 0;
+    margin-top: 5px;
+}
+
+#introduction {
+    clear: both;
+    margin: 10px 0;
+    /*background-color: burlywood;*/
+    width: 100%;
+    height: 200px;
+}
+.front_end h2{
+    text-decoration: underline;
+    /*border-bottom: 1px solid #d2994f;*/
+    /*color: #d2994f;*/
+    /*font:16px #d2994f bold;*/
+}
+.front_end .head1 {
+    color: #aecff7;
+}
+.front_end .head2 {
+    color: #d2994f;
+}
+.front_end .head3 {
+    color: #d45d5c;
+}
+.front_end {
+    margin: 10px;
+    /*background-color: rosybrown;*/
+    max-height: 200px;
+    width: 223px;
+    overflow: hidden;
+    float: left;
+}
