@@ -73,11 +73,13 @@ body {
 
 #about_tech {
     float: right;
-    background-color: #aecff7;
+    /*background-color: #aecff7;*/
     width: 203px;
     height: 301px;
     margin: 10px 0;
     margin-top: 5px;
+    border-top: 2px solid #cc8091;
+    overflow: hidden;
 }
 
 #introduction {
@@ -87,26 +89,96 @@ body {
     width: 100%;
     height: 200px;
 }
-.front_end h2{
+
+.front_end h2, #about_tech p {
     text-decoration: underline;
     /*border-bottom: 1px solid #d2994f;*/
     /*color: #d2994f;*/
     /*font:16px #d2994f bold;*/
 }
+
 .front_end .head1 {
     color: #aecff7;
 }
+
 .front_end .head2 {
     color: #d2994f;
 }
+
 .front_end .head3 {
     color: #d45d5c;
 }
+
 .front_end {
     margin: 10px;
-    /*background-color: rosybrown;*/
     max-height: 200px;
     width: 223px;
     overflow: hidden;
     float: left;
+}
+#about_tech .about:first-letter {
+    font-size: 2em;
+    /*display: block;*/
+    /*text-decoration: none;*/
+}
+#about_tech p {
+    color: #000;
+    font-family: "Microsoft YaHei";
+    font-size: 24px;
+    line-height: 12px;
+    /*background-color: gold;*/
+}
+
+#about_tech .intro {
+    font-size: 12px;
+    font-family: KaiTi;
+    line-height: 10px;
+    margin-top: -10px;
+    text-decoration: none;
+    color: #676767;
+}
+
+#about_tech .seven_hundred {
+    color: #75b86b;
+    font-family: "Microsoft YaHei";
+    font-size: 116px;
+    text-decoration: none;
+    margin: 0;
+    margin-top: 50px;
+    margin-left: -19px;
+}
+
+#about_tech .float_number {
+    display: inline-block;
+    font-size: 55px;
+    color: #cc8091;
+    font-family: "Microsoft YaHei";
+    text-decoration: none;
+    margin: 0;
+    margin-top: 80px;
+    margin-left: 20px;
+}
+
+#about_tech .css_stack {
+    float: right;
+    width: 80px;
+    height: 60px;
+    margin-top: 55px;
+    margin-right: 20px;
+}
+#about_tech .css_stack .css_1 {
+    font-size: 21px;
+    text-decoration: none;
+    color: #cc8091;
+    font-family: "Microsoft YaHei";
+    /*line-height: 4px;*/
+    /*margin-top: 20px;*/
+}
+
+#about_tech .css_stack .css_2 {
+    font-size: 12px;
+    text-decoration: none;
+    color: #cc8091;
+    font-family: "Microsoft YaHei";
+    margin-top: -12px;
 }
