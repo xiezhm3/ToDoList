@@ -3,12 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <title>Validate Form 01</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 20px auto;
+        }
+        #name_input {
+            border-radius: 3px;
+        }
+        #submit_btn {
+            display: inline-block;
+            background-color: darkgreen;
+            padding:6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            white-space:nowrap;
+            border: 1px solid transparent;
+            line-height: 1.428571429;
+            text-align:center;
+            color: #ffffff;
+        }
+    </style>
 </head>
 <body>
-<form>
-    <lable for="name_input">Name</lable>
-    <input id="name_input" type="text">
-    <input type="button" value="Validate">
+<form name="form">
+    <label for="name_input">Name:</label>
+    <input id="name_input" type="text" name="name">
+    <input type="button" value="Validate" id="submit_btn">
+    <br>
+    <label id="message_show">Error Format</label>
 </form>
+<script type="text/javascript">
+
+    window.onload = function () {
+        var submitBtn = document.getElementById("submit_btn");
+        var message = document.getElementById("message_show");
+        submitBtn.addEventListener("click", function () {
+            var name = document.getElementById("name_input").value;
+            var len = name.length;
+            if(len < 1) {
+                message.innerHTML = "The name must be in right format.";
+                message.style.color = "red";
+            } else {
+                for(var i = 0; i < len; i ++){
+                    var c = name[i];
+                    if (i === 0 && c.isNumeric()) { //here add a RegExp is better
+                        message.innerHTML = "The first character must not a number.";
+                        message.style.color = "red";
+                    } else {
+                        message.innerHTML = "Validate Pass.";
+                        message.style.color = "green";
+                    }
+                }
+            }
+        }, false);
+    };
+
+
+</script>
 </body>
 </html>
