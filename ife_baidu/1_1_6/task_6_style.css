@@ -117,11 +117,13 @@ body {
     overflow: hidden;
     float: left;
 }
+
 #about_tech .about:first-letter {
     font-size: 2em;
     /*display: block;*/
     /*text-decoration: none;*/
 }
+
 #about_tech p {
     color: #000;
     font-family: "Microsoft YaHei";
@@ -167,6 +169,7 @@ body {
     margin-top: 55px;
     margin-right: 20px;
 }
+
 #about_tech .css_stack .css_1 {
     font-size: 21px;
     text-decoration: none;
@@ -182,4 +185,40 @@ body {
     color: #cc8091;
     font-family: "Microsoft YaHei";
     margin-top: -12px;
+}
+
+#half_bottom {
+    margin-top: 30px;
+    width: 892px;
+    max-height:700px;
+    background-color: #75b86b;
+}
+#titler {
+    border-bottom:2px solid black;
+}
+#titler h1 {
+    font: bold 42px/38px arial,sans-serif;
+    color: #11456b;
+}
+#assay_pic {
+    float: right;
+    margin-top: -100px;
+}
+#article_01 {
+    float: left;
+    border-top: 40px;
+    width: 446px;
+    max-height: 700px;
+    /*background: #fe791e;*/
+    overflow: hidden;
+}
+#assay_words img{
+    float: right;
+}
+
+#article_02 {
+    float: right;
+    width: 446px;
+    height: 400px;
+    background: #000;
 }
