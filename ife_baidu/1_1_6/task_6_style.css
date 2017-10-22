@@ -66,8 +66,43 @@ body {
     background-color: lightgray;
     width: 641px;
     height: 301px;
+    position: relative;
     float: left;
     margin: 10px 0;
+}
+
+#inherit_pic img {
+    position: absolute;
+    margin-left: 0;
+    /*float: left;*/
+    z-index: 0;
+}
+
+#inherit_pic .shadow_right {
+    float: right;
+    background-color: rgba(235, 153, 153, 0.60);
+    position: relative;
+    z-index: 1;
+    width: 191px;
+    height: 301px;
+}
+
+#inherit_pic .shadow_left {
+    float: left;
+    background-color: rgba(49, 111, 77, 0.60);
+    position: relative;
+    z-index: 1;
+    width: 191px;
+    height: 301px;
+}
+
+.qian_first {
+    font-size: 70px;
+    float: left;
+    margin-right: 10px;
+    color: #f5e327;
+    padding:0;
+    font-family:"Microsoft YaHei";
 }
 
 #about_tech {
@@ -223,7 +258,7 @@ body {
     margin: 15px 15px 6px 15px;
 }
 
-#assay_words p {
+#assay_words p.indent_needed {
     text-indent: 33px;
 }
 
