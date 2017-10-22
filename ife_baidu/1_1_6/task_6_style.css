@@ -119,7 +119,7 @@ body {
 }
 
 #about_tech .about:first-letter {
-    font-size: 2em;
+    /*font-size: 2em;*/
     /*display: block;*/
     /*text-decoration: none;*/
 }
@@ -129,6 +129,8 @@ body {
     font-family: "Microsoft YaHei";
     font-size: 24px;
     line-height: 12px;
+    font-variant: small-caps;
+    text-transform: capitalize;
     /*background-color: gold;*/
 }
 
@@ -190,35 +192,81 @@ body {
 #half_bottom {
     margin-top: 30px;
     width: 892px;
-    max-height:700px;
-    background-color: #75b86b;
+    max-height: 700px;
+    /*background-color: #75b86b;*/
 }
+
 #titler {
-    border-bottom:2px solid black;
+    border-bottom: 2px solid black;
 }
+
 #titler h1 {
-    font: bold 42px/38px arial,sans-serif;
+    font: bold 42px/38px arial, sans-serif;
     color: #11456b;
 }
+
 #assay_pic {
     float: right;
     margin-top: -100px;
 }
+
 #article_01 {
     float: left;
     border-top: 40px;
-    width: 446px;
+    width: 415px;
     max-height: 700px;
     /*background: #fe791e;*/
     overflow: hidden;
 }
-#assay_words img{
+
+#assay_words img {
     float: right;
+    margin: 15px 15px 6px 15px;
+}
+
+#assay_words p {
+    text-indent: 33px;
 }
 
 #article_02 {
     float: right;
     width: 446px;
     height: 400px;
-    background: #000;
+    /*background: #000;*/
+}
+
+#article_02 img {
+    padding: 0;
+    width: 458px;
+    height: 275px;
+}
+
+#article_02 .front_text {
+    height: 44px;
+    margin-top: -45px;
+    margin-left: 40px;
+    text-indent: 8px;
+}
+
+#article_02 .front_text span {
+    color: white;
+    text-indent: 8px;
+    border-left: 3px solid green;
+    font-size: 30px;
+}
+
+#article_02 .front_text em {
+    color: #72b16a;
+    font-size: 18px;
+}
+
+#category {
+    margin-right:-10px;
+    padding: 0;
+    float: right;
+    width: 459px;
+    height: 318px;
+    /*margin-left:20px;*/
+    margin-top: -60px;
+    /*background-color: black;*/
 }
