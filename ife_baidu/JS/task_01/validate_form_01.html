@@ -47,7 +47,7 @@
             } else {
                 for(var i = 0; i < len; i ++){
                     var c = name[i];
-                    if (i === 0 && c.isNumeric()) { //here add a RegExp is better
+                    if (i === 0) { //here add a RegExp is better
                         message.innerHTML = "The first character must not a number.";
                         message.style.color = "red";
                     } else {
