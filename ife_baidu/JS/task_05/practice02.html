@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>任务四：基础JavaScript练习（一）</title>
+    <style>
+        body {
+            margin: 0 auto;
+        }
+
+        #container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #f5e327;
+        }
+
+        .type-in {
+            margin: 20px;
+        }
+
+        input {
+            background-color: black;
+            margin: 10px;
+            border: 1px solid black;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 2rem;
+        }
+
+        #input-num {
+            background-color: white;
+            color: #000;
+        }
+
+        .display-area {
+            cursor: pointer;
+        }
+
+        .col-1 {
+            color: #ffffff;
+            margin-left: 2px;
+            padding: 0;
+            width: 16px;
+            background-color: #fe791e;
+            text-align: center;
+            display: inline-block;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div class="type-in">
+        <input type="number" value="" id="input-num">
+        <input type="button" value="left in" id="left-in">
+        <input type="button" value="right in" id="right-in">
+        <input type="button" value="left out" id="left-out">
+        <input type="button" value="right out" id="right-out">
+    </div>
+    <div class="display-area">
+    </div>
+    <div class="sort-btn">
+        <input type="button" value="SORT">
+    </div>
+</div>
+</body>
+<script src="./practice_02.js" type="application/javascript"></script>
+</html>
