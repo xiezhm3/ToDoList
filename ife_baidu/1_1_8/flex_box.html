@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex Box Layout</title>
+    <style>
+        body {
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            height: 600px;
+            margin: 0;
+            padding: 20px;
+            background-color: #ffebd7;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .div {
+            padding: 20px;
+            width: 150px;
+            border: 1px solid black;
+        }
+
+        .div01 {
+            height: 120px;
+        }
+
+        .div02 {
+            height: 100px;
+        }
+
+        .div03 {
+            height: 40px;
+        }
+
+        .div04 {
+            height: 200px;
+            border: 1px solid blue;
+        }
+
+        @media screen and (max-width: 640px) {
+            .container {
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-content: space-between;
+            }
+
+            .div04 {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="div div01"></div>
+    <div class="div div02"></div>
+    <div class="div div03"></div>
+    <div class="div div04"></div>
+</div>
+</body>
+</html>

@@ -85,7 +85,6 @@
     var sortBtn = document.getElementsByClassName("sort-btn")[0];
     sortBtn.addEventListener("click", function () {
         var numList = document.getElementsByClassName("col-1");
-        alert("");
         sortQueue(numList);
     }, false);
 })();
