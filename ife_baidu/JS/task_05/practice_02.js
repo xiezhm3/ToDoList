@@ -67,20 +67,47 @@
         displayArea.removeChild(e.target);
     }, false);
 
-    var sortQueue = function (dataList) {
+    var partion = function (data, lo, hi) {
+        var i = lo, j = hi;
+        var v = parseInt(data[lo].style.height);
+        while (i < j) {
+            while (v >= parseInt(data[i].style.height)) {
+                i++;
+                if (i === hi) {
+                    break;
+                }
+            }
+            while (v <= parseInt(data[j].style.height)) {
+                j--;
+                while (j === lo) {
+                    break;
+                }
+            }
+            if (i > j) {
+                break;
+            }
+            var temp = data[j].style.height;
+            data[j].style.height = data[i].style.height;
+            data[i].style.height = temp;
+        }
+        data[lo].style.height = data[j].style.height; // fill the flag position
+        data[j].style.height = v + "px";
 
-        var dataListValue = [];
-        dataList.forEach(function (t){
-            dataListValue.push(t.value);
-        });
-        var newList = dataListValue.sort(function (d1, d2) {
-            return d1 - d2;
-        });
-        var i = 0;
-        dataList.forEach(function (t) {
-            t.value = newList[i];
-            i++;
-        });
+        return j;
+    }
+
+    var quickSort = function (data, lo, hi) {
+        if(lo < hi) {
+            var p = partion(data, lo, hi);
+            quickSort(data, lo, p-1);
+            quickSort(data, p+1, hi);
+        }
+
+    }
+
+    var sortQueue = function (dataList) {
+        quickSort(dataList, 0, dataList.length - 1);
+
     };
     var sortBtn = document.getElementsByClassName("sort-btn")[0];
     sortBtn.addEventListener("click", function () {
