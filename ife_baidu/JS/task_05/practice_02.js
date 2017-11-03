@@ -72,14 +72,14 @@
         var v = parseInt(data[lo].style.height);
         while (i < j) {
             while (v >= parseInt(data[i].style.height)) {
-                i++;
-                if (i === hi) {
+                ++i;
+                if (i == hi) {
                     break;
                 }
             }
             while (v <= parseInt(data[j].style.height)) {
-                j--;
-                while (j === lo) {
+                --j;
+                while (j == lo) {
                     break;
                 }
             }
@@ -106,9 +106,11 @@
     }
 
     var sortQueue = function (dataList) {
-        quickSort(dataList, 0, dataList.length - 1);
-
+        if(dataList.length >= 1) {
+            quickSort(dataList, 0, dataList.length - 1);
+        }
     };
+
     var sortBtn = document.getElementsByClassName("sort-btn")[0];
     sortBtn.addEventListener("click", function () {
         var numList = document.getElementsByClassName("col-1");
