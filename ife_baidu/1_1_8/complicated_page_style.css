@@ -164,7 +164,7 @@ aside {
     margin: 0;
 }
 
-.main .part4 .r-part4 .itemProject {
+.main .part4 .l-part4 .itemProject {
     /*margin:0 auto;*/
     padding: 10px 20px;
     position: relative;
@@ -208,7 +208,7 @@ ul, li {
     height: 100%;
     position: relative;
     display: block;
-    background-color: #939e8c;
+    background-color: #ededf0;
     z-index: 1;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -234,10 +234,28 @@ ul, li {
     height: 173px;
     padding: 20px;
     z-index: 0;
-    padding: 40px 50px;
+    padding: 40px 40px;
     border-radius: 5px;
     border-top-left-radius: 0;
     border: 1px solid #aaaaaa;
+}
+
+.itemProject ul li .item02 {
+    margin-left: -94px;
+    border-radius: 5px;
+}
+
+.itemProject ul li .item03 {
+    margin-left: -188px;
+    border-radius: 5px;
+}
+.itemProject ul li .item04 {
+    margin-left: -282px;
+    border-radius: 5px;
+}
+.itemProject ul li .item05 {
+    margin-left: -376px;
+    border-radius: 5px;
 }
 
 .itemProject ul li .tab td {
