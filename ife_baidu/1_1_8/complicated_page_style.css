@@ -349,4 +349,29 @@ table {
     cursor: pointer;
 }
 
+.brandRank table thead th {
+    font-size: 14px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bolder;
+}
 
+.bar {
+    display: inline-block;
+    margin-bottom: 2px;
+    width: 168px;
+    height: 4px;
+    background-color: #dcdcdc;
+}
+
+.bar .hot {
+    z-index: 99;
+    display: block;
+    margin-bottom: 2px;
+    height: 4px;
+}
+
+.hot-bar-1 {
+    width: 80%;
+    background-color: #ed6e52;
+}
