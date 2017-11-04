@@ -149,6 +149,17 @@ aside {
     width: 361px;
 }
 
+.header {
+    height: 40px;
+    line-height: 40px;
+    background: #f4f6f7;
+    padding-left: 20px;
+    border-bottom: 2px solid #e7e9eb;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #aaaaaa;
+}
+
 .main .part4 .l-part4 .itemHeader, .main .part4 .r-part4 .itemHeader {
     height: 40px;
     line-height: 40px;
@@ -249,10 +260,12 @@ ul, li {
     margin-left: -188px;
     border-radius: 5px;
 }
+
 .itemProject ul li .item04 {
     margin-left: -282px;
     border-radius: 5px;
 }
+
 .itemProject ul li .item05 {
     margin-left: -376px;
     border-radius: 5px;
@@ -266,7 +279,7 @@ ul, li {
     width: 100%;
     text-align: center;
     cursor: pointer;
-    border:1px solid black;
+    border: 1px solid black;
     border-collapse: collapse;
 }
 
@@ -285,7 +298,9 @@ tr {
 td, th {
     display: table-cell;
     vertical-align: inherit;
+    font-weight: bold;
 }
+
 input {
     text-rendering: auto;
 }
@@ -311,3 +326,27 @@ input[type="radio"] {
     height: 355px;
     float: right;
 }
+
+.r-part5 r-part5-header {
+    background-color: #f4f6f7;
+}
+
+.r-part5 p {
+    margin: 0;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.brandRank table {
+    margin: 20px 40px;
+    width: 455px;
+    height: 270px;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid #e1e1e1;
+    cursor: pointer;
+}
+
+
