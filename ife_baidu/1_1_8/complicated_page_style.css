@@ -1,0 +1,295 @@
+body {
+    margin: 0 auto;
+    padding: 0;
+    min-width: 1024px;
+    font-family: "Microsoft YaHei";
+}
+
+header {
+    height: 55px;
+    width: 100%;
+    background-color: lightblue;
+    position: relative;
+    margin: 0;
+}
+
+.site-logo {
+    float: left;
+}
+
+.login {
+    float: right;
+    height: 55px;
+    line-height: 55px;
+    margin-right: 50px;
+    font-size: 20px;
+}
+
+.login a {
+    text-decoration: none;
+}
+
+.search {
+    float: right;
+    height: 55px;
+    margin-right: 50px;
+    line-height: 55px;
+}
+
+.search input {
+    width: 280px;
+    height: 25px;
+    padding-left: 40px;
+    border: 1px solid lightblue;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+aside {
+    color: #ffffff;
+    display: block;
+    float: left;
+    width: 260px;
+    height: 1200px;
+    background-color: black;
+}
+
+.personal {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: lightgrey;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    margin: 10px;
+}
+
+.info, .report {
+    margin: 0;
+    width: 100%;
+    height: 200px;
+    border: 1px solid white;
+}
+
+.container {
+    float: right;
+    width: calc(100% - 260px);
+    height: 1200px;
+    margin: 0;
+    padding: 0;
+    background-color: lightgrey;
+}
+
+.nav {
+    height: 30px;
+    width: 100%;
+    line-height: 30px;
+    padding-left: 53px;
+    margin-bottom: 30px;
+    margin-top: 0;
+    background: #000;
+    color: #ffffff;
+}
+
+.nav p {
+    margin: 0;
+}
+
+.main {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.main .part {
+    border-radius: 2px;
+    box-shadow: 0px 0px 5px #003;
+    margin-bottom: 9px;
+}
+
+.main .part1 {
+    background-color: white;
+    position: relative;
+    height: 100px;
+}
+
+.main .part2 {
+    height: 60px;
+}
+
+.main .part3 {
+    height: 90px;
+}
+
+.main .part4 {
+    height: 355px;
+    margin-bottom: 10px;
+    box-shadow: none;
+    overflow: hidden;
+}
+
+.main .partition {
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0px 0px 5px #ABABAB;
+}
+
+.main .part4 .l-part4 {
+    float: left;
+    width: 530px;
+    height: 355px;
+    margin-right: 9px;
+}
+
+.main .part4 .r-part4 {
+    float: right;
+    height: 355px;
+    width: 361px;
+}
+
+.main .part4 .l-part4 .itemHeader, .main .part4 .r-part4 .itemHeader {
+    height: 40px;
+    line-height: 40px;
+    background: #f4f6f7;
+    padding-left: 20px;
+    border-bottom: 2px solid #e7e9eb;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #aaaaaa;
+}
+
+.itemHeader p {
+    margin: 0;
+}
+
+.main .part4 .r-part4 .itemProject {
+    /*margin:0 auto;*/
+    padding: 10px 20px;
+    position: relative;
+}
+
+.itemProject ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: disc;
+}
+
+.itemProject ul li {
+    display: inline-block;
+    position: relative;
+    width: 90px;
+    line-height: 30px;
+    text-align: center;
+}
+
+ul li {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+.itemProject ul li input {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 99;
+    position: absolute;
+    left: 0;
+}
+
+.itemProject ul li span {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: block;
+    background-color: #939e8c;
+    z-index: 1;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.itemProject ul li input:checked + span {
+    background-color: #ffffff;
+    border: 1px solid #aaaaaa;
+    border-bottom: 1px solid #ffffff;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.itemProject ul li input:checked + span + .tab {
+    display: block;
+}
+
+.itemProject ul li .tab {
+    display: none;
+    position: absolute;
+    top: 31px;
+    width: 410px;
+    height: 173px;
+    padding: 20px;
+    z-index: 0;
+    padding: 40px 50px;
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border: 1px solid #aaaaaa;
+}
+
+.itemProject ul li .tab td {
+    border: 1px solid #aaaaaa;
+}
+
+.itemProject ul li .tab table {
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    border:1px solid black;
+    border-collapse: collapse;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+input {
+    text-rendering: auto;
+}
+
+input[type="radio"] {
+    -webkit-appearance: radio;
+    box-sizing: border-box;
+}
+
+.main .part5 {
+    height: 355px;
+    box-shadow: none;
+}
+
+.main .part5 .l-part5 {
+    width: 350px;
+    height: 355px;
+    float: left;
+}
+
+.main .part .r-part5 {
+    width: 530px;
+    height: 355px;
+    float: right;
+}
