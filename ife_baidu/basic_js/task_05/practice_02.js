@@ -67,7 +67,7 @@
         displayArea.removeChild(e.target);
     }, false);
 
-    var partion = function (data, lo, hi) {
+    var partition = function (data, lo, hi) {
         var i = lo, j = hi;
         var v = parseInt(data[lo].style.height);
         while (i < j) {
@@ -98,7 +98,7 @@
 
     var quickSort = function (data, lo, hi) {
         if(lo < hi) {
-            var p = partion(data, lo, hi);
+            var p = partition(data, lo, hi);
             quickSort(data, lo, p-1);
             quickSort(data, p+1, hi);
         }
