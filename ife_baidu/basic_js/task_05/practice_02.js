@@ -67,17 +67,19 @@
         displayArea.removeChild(e.target);
     }, false);
 
+    var snapshots = [];
+
     var partition = function (data, lo, hi) {
         var i = lo, j = hi;
-        var v = parseInt(data[lo].style.height);
+        var v = parseInt(data[lo]);
         while (i < j) {
-            while (v >= parseInt(data[i].style.height)) {
+            while (v >= parseInt(data[i])) {
                 ++i;
                 if (i == hi) {
                     break;
                 }
             }
-            while (v <= parseInt(data[j].style.height)) {
+            while (v <= parseInt(data[j])) {
                 --j;
                 while (j == lo) {
                     break;
@@ -86,12 +88,14 @@
             if (i > j) {
                 break;
             }
-            var temp = data[j].style.height;
-            data[j].style.height = data[i].style.height;
-            data[i].style.height = temp;
+            var temp = data[j];
+            data[j]= data[i];
+            data[i] = temp;
+            snapshots.push(data);
         }
-        data[lo].style.height = data[j].style.height; // fill the flag position
-        data[j].style.height = v + "px";
+        data[lo] = data[j];
+        data[j] = v;
+        snapshots.push(data);
 
         return j;
     }
@@ -102,12 +106,16 @@
             quickSort(data, lo, p-1);
             quickSort(data, p+1, hi);
         }
-
+        return data;
     }
 
     var sortQueue = function (dataList) {
         if(dataList.length >= 1) {
-            quickSort(dataList, 0, dataList.length - 1);
+            var data = [];
+            for(var i = 0; i< dataList.length; i++) {
+                data.push(parseInt(dataList[i].style.height));
+            }
+            quickSort(data, 0, data.length - 1);
         }
     };
 
