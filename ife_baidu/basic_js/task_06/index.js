@@ -85,4 +85,13 @@
 		}
 	}
 
+	function insertAfter(newELement, targetElement){
+		var parent = targetElement.parentNode;
+		if (parent.lastChild == targetElement) {
+			parent.appendChild(newELement);
+		} else {
+			parent.insertBefore(newELement, targetElement.nextSibling);
+		}
+	}
+
 })();
