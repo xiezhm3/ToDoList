@@ -20,12 +20,12 @@
 	var searchBtn = document.createElement("input");
 	searchBtn.setAttribute("class", "search");
 	searchBtn.setAttribute("type", "button");
-	searchBtn.value = "search"
+	searchBtn.value = "search";
 	childHtml.appendChild(searchBtn);
 
 	var searchText = document.createElement("input");
 	searchText.type = "text";
-	searchText.setAttribute("class", "searchText")
+	searchText.setAttribute("class", "searchText");
 	searchText.setAttribute("placeholder", "input the string you want to search...");
 	childHtml.appendChild(searchText);
 
@@ -44,7 +44,7 @@
 		var spanFrag = document.createDocumentFragment();
 
 		words.forEach(function (t) {
-			if (t == "") {
+			if (t === "") {
 				return;
 			}
 			var spanEle = document.createElement("div");
@@ -62,7 +62,7 @@
 
 		var searchStr = searchText.value;
 
-		if (searchStr != null && searchStr.length > 0) {
+		if (searchStr && searchStr.length > 0) {
 			display.innerHTML = data.map(function (t) {
 				t = t.replace(new RegExp(searchStr, "g"), "<span class='found'>" + searchStr +"</span>");
 
@@ -71,5 +71,18 @@
 
 		}
 	}, false);
+
+
+	function addLoadEvent(func) {
+		var oldonload = window.onload();
+		if(typeof window.onload != "function"){
+			window.onload = func;
+		} else {
+			window.onload = function(){
+			    oldonload();
+			    func();
+			};
+		}
+	}
 
 })();
