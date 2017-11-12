@@ -1,4 +1,57 @@
 @charset "UTF-8";
+body {
+    margin: 0 auto;
+    padding: 0;
+    background: lightgrey;
+}
 
+.todoapp {
+    width: 600px;
+    padding: 20px;
+    margin: 10px auto;
+    background: #ffffff;
+    border: 1px solid white;
+    box-shadow: 1px 2px 5px gray;
+}
 
+.todoapp .new-todo {
+    width: 90%;
+    line-height: 50px;
+    height: 50px;
+    font-size: 33px;
+    border: 1px solid lightgray;
+    box-shadow: 1px 1px 3px lightgray;
+}
 
+.main {
+    /* float: left; */
+    display: block;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.todo-list {
+    margin: 10px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.todo-list li {
+    /* margin: 13px; */
+    padding: 18px 20px 18px 0;
+    position: relative;
+    font-size: 24px;
+    list-style-type: none;
+}
+
+.view input {
+    margin: 0;
+    padding: 0;
+}
+
+.instruction {
+    clear: both;
+}

@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>TO-DO-LIST</title>
     <link rel="stylesheet" href="./to-do-list.css">
 </head>
+
 <body>
     <div class="todoapp">
         <header>
@@ -14,7 +16,16 @@
         <section class="main">
             <input id="toggle-all" type="checkbox">
             <label for="toggle-all">Mark all as complete</label>
-            <ul class="todo-list"></ul>
+            <ul class="todo-list">
+                <li>
+                    <div class="view">
+                        <input class="toggle" type="checkbox" checked='checked'>
+                        <label>title</label>
+                        <a class="destroy"></a>
+                    </div>
+                    <input class="edit" type="text" value=title></input>
+                </li>
+            </ul>
         </section>
         <div class="instruction">
             Double click to edit a todo.
@@ -25,26 +36,29 @@
         </footer>
     </div>
 
-<script type="application/javascript" src="./to-do-list.js"></script>
-<script src="../../../../jquery-3.1.1.js" type="application/javascript"></script>
-<script src="http://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"></script>
-<script src="http://ajax.cdnjs.com/ajax/libs/underscore.js/1.1.6/underscore-min.js"></script>
-<script src="http://ajax.cdnjs.com/ajax/libs/backbone.js/0.3.3/backbone-min.js"></script>
-<script src="https://cdn.bootcss.com/backbone-localstorage.js/1.1.16/backbone.localStorage-min.js"></script>
+    <script type="application/javascript" src="./to-do-list.js"></script>
+    <script src="../../../../jquery-3.1.1.js" type="application/javascript"></script>
+    <script src="http://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"></script>
+    <script src="http://ajax.cdnjs.com/ajax/libs/underscore.js/1.1.6/underscore-min.js"></script>
+    <script src="http://ajax.cdnjs.com/ajax/libs/backbone.js/0.3.3/backbone-min.js"></script>
+    <script src="https://cdn.bootcss.com/backbone-localstorage.js/1.1.16/backbone.localStorage-min.js"></script>
 
-<script class="item-template" type="text/template">
-    <div class="view">
-        <input class="toggle" type="checkbox" <%= done ? "checked='checked'": ""%> />
-        <label><%- title %></label>
-        <a class="destroy"></a>
-    </div>
-    <input class="edit" type="text" value=<%- title %>></input>
-</script>
+    <script class="item-template" type="text/template">
+        <div class="view">
+            <input class="toggle" type="checkbox" <%=d one ? "checked='checked'": ""%> />
+            <label><%- title %></label>
+            <a class="destroy"></a>
+        </div>
+        <input class="edit" type="text" value=<%- title %> ></input>
+    </script>
 
-<script class="stas-template" type="text/template">
-    <% if(done) { %>
-        <a class="clear-complated">Clear <%= done %> completed <%= done == 1 ? "item" : "items"%></a>
-    <% } %>
-</script>
+    <script class="stas-template" type="text/template">
+        <% if(done) { %>
+            <a class="clear-complated">Clear <%= done %> completed <%= done == 1 ? "item" : "items"%></a>
+            <% } %>
+                <div class="todo-count"><b><%= remaining %></b>
+                    <% remaing == 1 ? "item" : "items"%> left </div>
+    </script>
 </body>
+
 </html>
