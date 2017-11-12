@@ -21,7 +21,7 @@
         tagName: "li",
 
         events: {
-            "click span,swap": "swap",
+            "click span.swap": "swap",
             "click span.delete": "remove"
         },
 
