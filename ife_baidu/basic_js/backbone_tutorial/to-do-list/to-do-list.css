@@ -6,16 +6,22 @@ body {
 }
 
 .todoapp {
-    width: 600px;
+    width: 33%;
     padding: 20px;
     margin: 10px auto;
     background: #ffffff;
     border: 1px solid white;
     box-shadow: 1px 2px 5px gray;
+    border-radius: 5px;
 }
 
-.todoapp .new-todo {
-    width: 90%;
+h1 {
+    text-align: center;
+    font-family: Verdana;
+}
+
+.todoapp .new-todo, .todo-list .edit {
+    width: 100%;
     line-height: 50px;
     height: 50px;
     font-size: 33px;
@@ -26,6 +32,7 @@ body {
 .main {
     /* float: left; */
     display: block;
+    /*display: none;*/
 }
 
 li {
@@ -47,6 +54,13 @@ li {
     list-style-type: none;
 }
 
+.todo-list .view, .todo-list .edit {
+    float: left;
+}
+.todo-list .view {
+    /*display: none;*/
+}
+
 .view input {
     margin: 0;
     padding: 0;
@@ -54,4 +68,23 @@ li {
 
 .instruction {
     clear: both;
+}
+
+.instruction {
+    text-align: center;
+    margin-top: 40px;
+    font-weight:bolder;
+    font-size: 30px;
+    color: #9e9e9e;
+}
+
+footer {
+    margin:0 -20px -20px -20px;
+    color: #555;
+    background-color: #f4fce8;
+    border-top:1px solid #ededed;
+    padding:0 20px;
+    overflow: hidden;
+    line-height: 38px;
+    border-radius: 0 0 5px 5px;
 }
