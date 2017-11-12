@@ -6,6 +6,24 @@
     <link rel="stylesheet" href="./to-do-list.css">
 </head>
 <body>
+    <div class="todoapp">
+        <header>
+            <h1>Todos</h1>
+            <input type="text" class="new-todo" placeholder="what needs to be done?">
+        </header>
+        <section class="main">
+            <input id="toggle-all" type="checkbox">
+            <label for="toggle-all">Mark all as complete</label>
+            <ul class="todo-list"></ul>
+        </section>
+        <div class="instruction">
+            Double click to edit a todo.
+        </div>
+        <footer>
+            <a class="clear-completed">Clear Completed</a>
+            <div class="todo-count"></div>
+        </footer>
+    </div>
 
 <script type="application/javascript" src="./to-do-list.js"></script>
 <script src="../../../../jquery-3.1.1.js" type="application/javascript"></script>
@@ -13,5 +31,20 @@
 <script src="http://ajax.cdnjs.com/ajax/libs/underscore.js/1.1.6/underscore-min.js"></script>
 <script src="http://ajax.cdnjs.com/ajax/libs/backbone.js/0.3.3/backbone-min.js"></script>
 <script src="https://cdn.bootcss.com/backbone-localstorage.js/1.1.16/backbone.localStorage-min.js"></script>
+
+<script class="item-template" type="text/template">
+    <div class="view">
+        <input class="toggle" type="checkbox" <%= done ? "checked='checked'": ""%> />
+        <label><%- title %></label>
+        <a class="destroy"></a>
+    </div>
+    <input class="edit" type="text" value=<%- title %>></input>
+</script>
+
+<script class="stas-template" type="text/template">
+    <% if(done) { %>
+        <a class="clear-complated">Clear <%= done %> completed <%= done == 1 ? "item" : "items"%></a>
+    <% } %>
+</script>
 </body>
 </html>
