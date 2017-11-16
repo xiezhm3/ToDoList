@@ -8,7 +8,7 @@
 
 	SuperType.prototype.sayName = function () {
 		console.log(this.name);
-	}
+	};
 
 	function SubType(name, age) {
 		SuperType.call(this, name);
@@ -32,6 +32,8 @@
 
 	SubType.prototype.sayAge = function () {
 		console.log(this.age);
-	}
+	};
+
+	sayAge();
 
 })();
