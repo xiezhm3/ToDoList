@@ -176,6 +176,6 @@ $(function () {
         }
     });
 
-    var App = new AppView;
+    var App = new AppView();
 
 });
