@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Drap And Drop</title>
+    <style type="text/css">
+        body {
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .ws-container {
+            width: 100%;
+        }
+
+        .ws-drag01, .ws-drag02 {
+            float: left;
+            height: 200px;
+            width: 300px;
+            text-align: center;
+            line-height: 200px;
+            border: 1px solid #333333;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="ws-container">
+    <div class="ws-drag01" ondragover="allowDrop(event)" ondrop="drop(event)">
+        <p draggable="true" id="dragged-text" ondragstart="drag(event)">the text will be dragged.</p>
+    </div>
+    <!--ondragover 事件规定在何处放置被拖动的数据。-->
+    <div class="ws-drag02" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+</div>
+
+<script type="text/javascript">
+    //默认地，无法将数据/元素放置到其他元素中。如果需要设置允许放置，我们必须阻止对元素的默认处理方式。
+    var allowDrop = function (event) {
+        event.preventDefault();
+    };
+
+    var drop = function (event) {
+        event.preventDefault();
+        var data = event.dataTransfer.getData("Text");
+        event.target.appendChild(document.getElementById(data));
+    };
+
+    var drag = function (event) {
+        event.dataTransfer.setData("Text", event.target.id);
+    };
+</script>
+</body>
+</html>
