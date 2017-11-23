@@ -10,21 +10,33 @@
         }
 
         .ws-container {
-            width: 100%;
-            margin: 0 auto;
-            padding: 0;
+            width: 1000px;
+            margin: 20px auto;
+            padding: 10px;
         }
 
         form {
+            margin: 20px;
+            padding: 10px;
             width: 600px;
             height: auto;
-            border: 1px solid black;
+            /*border: 1px solid black;*/
             box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        label {
+            font-size: 18px;
+            text-transform: capitalize;
+            display: inline-block;
+            width: 100px;
+            /*border: 1px solid black;*/
+            text-align: right;
         }
 
         input {
             font-size: 18px;
-            display: block;
+            /*display: block;*/
             border-radius: 3px;
             height: 30px;
             width: 400px;
@@ -42,6 +54,24 @@
             -moz-border-radius: 8px;
             border-radius: 3px;
             border: none;
+            float: right;
+        }
+
+        .ws-mesg-focus, .ws-mesg-blur, .ws-mesg-correct, .ws-mesg-pw-notmatch, .ws-mesg-email-invalide {
+            margin-left: 110px;
+            margin-top: 0px;
+        }
+
+        .ws-mesg-focus {
+            color: #cccccc;
+        }
+
+        .ws-mesg-blur, .ws-mesg-pw-notmatch, .ws-mesg-email-invalide {
+            color: red;
+        }
+
+        .ws-mesg-correct {
+            color: green;
         }
 
     </style>
@@ -49,19 +79,41 @@
 <body>
 <div class="ws-container">
     <form name="form" onsubmit="return validate()">
-        Name: <input type="text" value="">
-        Password: <input type="password" class="p1">
-        Confirm: <input type="password" class="p2">
-        E-mail: <input type="email" class="e-mail">
-        Phone: <input type="tel">
+
+        <label>Name:</label> <input type="text" value="">
+        <p class="ws-mesg-focus" style="display: none">必填，长度为4~16个字符</p>
+        <p class="ws-mesg-blur" style="display: none">姓名不能为空且不能含有空格</p>
+        <p class="ws-mesg-correct" style="display: none">名称格式正确</p>
+
+        <label>Password:</label> <input type="password" class="p1">
+        <p class="ws-mesg-focus" style="display: none">必填，input password</p>
+        <p class="ws-mesg-blur" style="display: none">密码不能为空,不能用空格作为密码</p>
+        <p class="ws-mesg-correct" style="display: none">密码可用</p>
+
+        <label>Confirm:</label> <input type="password" class="p2">
+        <p class="ws-mesg-focus" style="display: none">input password again</p>
+        <p class="ws-mesg-blur" style="display: none">密码不能为空,不能用空格作为密码</p>
+        <p class="ws-mesg-pw-notmatch" style="display: none">两次输入不一致，请重新输入密码</p>
+        <p class="ws-mesg-correct" style="display: none">密码输入一致</p>
+
+        <label>E-mail:</label> <input type="email" class="e-mail">
+        <p class="ws-mesg-focus" style="display: none">必填，e-mail</p>
+        <p class="ws-mesg-blur" style="display: none">邮箱不能为空，邮箱格式错误</p>
+        <p class="ws-mesg-email-invalide" style="display: none">邮箱格式错误</p>
+        <p class="ws-mesg-correct" style="display: none">邮箱格式正确</p>
+
+        <label>Phone:</label> <input type="tel">
+        <p class="ws-mesg-focus" style="display: none">必填，phone number</p>
+        <p class="ws-mesg-blur" style="display: none">号码格式错误，请输入正确的11位号码</p>
+        <p class="ws-mesg-correct" style="display: none">格式正确</p>
         <input type="submit" value="Submit">
     </form>
 </div>
 <script type="application/javascript">
-	"use strict";
-	var validate = function () {
+    "use strict";
+    var validate = function () {
 
-	};
+    };
 </script>
 </body>
 </html>
