@@ -26,40 +26,40 @@
     </style>
 </head>
 <body>
-<form name="form">
+<form name="form" onsubmit="return validateForm()">
     <label for="name_input">Name:</label>
-    <input id="name_input" type="text" name="name">
-    <input type="button" value="Validate" id="submit_btn">
+    <input id="name_input" type="text" name="name" size="30">
+    <input type="submit" value="Validate" id="submit_btn">
     <br>
-    <label id="message_show">Error Format</label>
+    <label id="message_show">Needed, input 4 - 16 characters.</label>
 </form>
 <script type="text/javascript">
-
-    window.onload = function () {
-        var submitBtn = document.getElementById("submit_btn");
-        var message = document.getElementById("message_show");
-        submitBtn.addEventListener("click", function () {
-            var name = document.getElementById("name_input").value;
-            var len = name.length;
-            if(len < 1) {
-                message.innerHTML = "The name must be in right format.";
-                message.style.color = "red";
+    var validateForm = function () {
+    	var label = document.querySelector("#message_show");
+    	var nameInput = form.name.value;
+    	var len = nameInput.length;
+    	var sum = 0;
+    	var codeVal;
+    	for (var i = 0; i < len; i++) {
+    		codeVal = nameInput.charCodeAt(i);
+    		if(codeVal >= 0x00 && 0xFF >= codeVal) {
+    			sum += 1;
             } else {
-                for(var i = 0; i < len; i ++){
-                    var c = name[i];
-                    if (i === 0) { //here add a RegExp is better
-                        message.innerHTML = "The first character must not a number.";
-                        message.style.color = "red";
-                    } else {
-                        message.innerHTML = "Validate Pass.";
-                        message.style.color = "green";
-                    }
-                }
+    			sum += 2;
             }
-        }, false);
+        }
+        if(sum > 3 && sum < 17) {
+    		form.name.focus();
+    		label.style.color = "#67BF7F";
+    		label.innerHTML = "Right Format";
+    		return false;
+        } else {
+	        form.name.focus();
+	        label.style.color = "#FF6666";
+	        label.innerHTML = "Wrong Format";
+	        return false;
+        }
     };
-
-
 </script>
 </body>
 </html>
