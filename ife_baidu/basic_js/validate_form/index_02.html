@@ -78,31 +78,31 @@
 </head>
 <body>
 <div class="ws-container">
-    <form name="form" onsubmit="return validate()">
+    <form name="form">
 
-        <label>Name:</label> <input type="text" value="">
+        <label>Name:</label> <input type="text" value="" class="ws-name-input">
         <p class="ws-mesg-focus" style="display: none">必填，长度为4~16个字符</p>
         <p class="ws-mesg-blur" style="display: none">姓名不能为空且不能含有空格</p>
         <p class="ws-mesg-correct" style="display: none">名称格式正确</p>
 
-        <label>Password:</label> <input type="password" class="p1">
+        <label>Password:</label> <input type="password" class="ws-password">
         <p class="ws-mesg-focus" style="display: none">必填，input password</p>
         <p class="ws-mesg-blur" style="display: none">密码不能为空,不能用空格作为密码</p>
         <p class="ws-mesg-correct" style="display: none">密码可用</p>
 
-        <label>Confirm:</label> <input type="password" class="p2">
+        <label>Confirm:</label> <input type="password" class="ws-password-confirm">
         <p class="ws-mesg-focus" style="display: none">input password again</p>
         <p class="ws-mesg-blur" style="display: none">密码不能为空,不能用空格作为密码</p>
         <p class="ws-mesg-pw-notmatch" style="display: none">两次输入不一致，请重新输入密码</p>
         <p class="ws-mesg-correct" style="display: none">密码输入一致</p>
 
-        <label>E-mail:</label> <input type="email" class="e-mail">
+        <label>E-mail:</label> <input type="email" class="ws-email">
         <p class="ws-mesg-focus" style="display: none">必填，e-mail</p>
         <p class="ws-mesg-blur" style="display: none">邮箱不能为空，邮箱格式错误</p>
         <p class="ws-mesg-email-invalide" style="display: none">邮箱格式错误</p>
         <p class="ws-mesg-correct" style="display: none">邮箱格式正确</p>
 
-        <label>Phone:</label> <input type="tel">
+        <label>Phone:</label> <input type="tel" class="ws-phone">
         <p class="ws-mesg-focus" style="display: none">必填，phone number</p>
         <p class="ws-mesg-blur" style="display: none">号码格式错误，请输入正确的11位号码</p>
         <p class="ws-mesg-correct" style="display: none">格式正确</p>
@@ -110,10 +110,25 @@
     </form>
 </div>
 <script type="application/javascript">
-    "use strict";
-    var validate = function () {
+    (function () {
+        "use strict";
 
-    };
+        var name = document.querySelector(".ws-name-input");
+        name.addEventListener("focus", function () {
+            document.querySelector(".ws-mesg-correct").style.display = "none";
+            document.querySelector(".ws-mesg-blur").style.display = "none";
+            document.querySelector(".ws-mesg-focus").style.display = "block";
+        },false);
+        name.addEventListener("blur", function () {
+            document.querySelector(".ws-mesg-focus").style.display = "none";
+            var val = name.value;
+            if(!val) {
+                document.querySelector(".ws-mesg-blur").style.display = "block";
+            } else {
+                document.querySelector(".ws-mesg-correct").style.display = "block";
+            }
+        }, false);
+    })();
 </script>
 </body>
 </html>
