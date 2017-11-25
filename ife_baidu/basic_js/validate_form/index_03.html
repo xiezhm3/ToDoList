@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validate Form 03</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .ws-container {
+            width: 1000px;
+            height: 1000px;
+            text-align: center;
+            margin: 30px auto;
+            padding: 10px;
+        }
+
+        .ws-radio {
+            margin-left: 20px;
+            padding: 10px;
+        }
+
+        input[type="radio"] {
+            margin-left: 20px;
+            padding: 10px;
+            text-transform: capitalize;
+        }
+
+        .ws-select {
+            margin: 0 auto;
+            display: none;
+        }
+
+        select {
+            width: 200px;
+            height: 30px;
+            font-size: 18px;
+            margin: 10px;
+        }
+
+        .ws-work-company {
+            margin: 0;
+            display: none;
+        }
+
+        .ws-company {
+            width: 420px;
+            height: 30px;
+            border-radius: 4px;
+            margin-left: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+<div class="ws-container">
+    <div class="ws-radio">
+        <input type="radio" name="identification" class="student" value="student"> Student
+        <input type="radio" name="identification" class="graduate" value="graduate"> Graduate
+    </div>
+    <div class="ws-select">
+        <label class="ws-school" for="ws-city">学校</label>
+        <select id="ws-city">
+            <option value="select" selected="selected">please select</option>
+            <option value="beijing">Beijing</option>
+            <option value="guangdong">Guangdong</option>
+        </select>
+        <select id="ws-school">
+            <option value="select" selected="selected">please select</option>
+        </select>
+    </div>
+    <div class="ws-work-company">
+        <label>Company</label>
+        <input type="text" class="ws-company" size="50" value="">
+    </div>
+</div>
+<script type="application/javascript">
+    (function () {
+        "use strict";
+
+        var schools = {
+            "select": ["please select"],
+            "beijing": ["TsingHua University", "Peaking University"],
+            "guangdong": ["Sun Yat-sen University", "Shenzhen University"]
+        };
+
+        var selectOption = document.querySelector(".ws-select");
+        var company = document.querySelector(".ws-work-company");
+
+        var student = document.querySelector(".student");
+        student.addEventListener("click", function () {
+            company.style.display = "none";
+            selectOption.style.display = "block";
+        }, false);
+
+        var graduate = document.querySelector(".graduate");
+        graduate.addEventListener("click", function () {
+            company.style.display = "block";
+            selectOption.style.display = "none";
+        },false);
+
+        var dynamicChangeSchool = function (city, school) {
+            // selected index
+            var index = city.selectedIndex;
+            // selected item value
+            var selectedCity = city.options[index].value;
+
+            school.innerHTML = "";
+
+            schools[selectedCity].forEach(function (val, index, arr) {
+                var option = document.createElement("option");
+                option.text = val;
+                option.value = val;
+                school.appendChild(option);
+            });
+        };
+
+        var city = document.querySelector("#ws-city");
+        var school = document.querySelector("#ws-school");
+        city.addEventListener("change", function () {
+            dynamicChangeSchool(city, school);
+        }, false);
+
+    })();
+</script>
+</body>
+</html>
