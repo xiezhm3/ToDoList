@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
-body{
-    margin:0 auto;
+body {
+    margin: 0 auto;
     padding: 0;
     text-align: center;
 }
@@ -20,22 +20,18 @@ body{
     border-collapse: collapse;
 }
 
-.ws-table-left{
+.ws-table-left {
     position: absolute;
     margin-left: calc(50% - 260px);
     border-collapse: collapse;
 }
 
-/*.ws-table-left tr {*/
-    /*padding: 0;*/
-/*}*/
-
-.ws-table-head tr td, .ws-table-left tr td{
+.ws-table-head tr td, .ws-table-left tr td {
     width: 40px;
     height: 40px;
 }
 
-.ws-table-container{
+.ws-table-container {
     margin: 0 auto;
     border: 3px solid black;
     border-collapse: collapse;
@@ -46,6 +42,18 @@ body{
     height: 40px;
     border: 1px solid black;
     padding: 0;
+}
+
+.ws-btn button {
+    font-size: 20px;
+    font-weight: bolder;
+    background-color: lightgoldenrodyellow;
+    margin-top: 6px;
+    width: 80px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 1px 2px 2px #ccc;
 }
 
 
