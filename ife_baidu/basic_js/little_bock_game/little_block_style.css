@@ -7,10 +7,6 @@ body {
 }
 
 .ws-container {
-    /*margin: 0 auto;*/
-    /*width: 1024px;*/
-    /*height: 898px;*/
-    /*border: 1px solid #939e8c;*/
     text-align: center;
 }
 
@@ -56,4 +52,15 @@ body {
     box-shadow: 1px 2px 2px #ccc;
 }
 
+.ws-table-target {
+    background-color: #fe0736;
+}
+
+.ws-little-block {
+    margin-top: -20px;
+    background-color: #0550ff;
+    position: absolute;
+    width: 40px;
+    height: 10px;
+}
 
