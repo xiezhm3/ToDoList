@@ -22,7 +22,8 @@
     var go = function () {
         var block = document.querySelector(".ws-little-block");
         var parentNode = block.parentNode.id;
-        var col = 0, row = 0;
+        var col = 0;
+        var row = 0;
         var rowCol = parentNode.substring(2);
         console.log(rowCol);
         if (rowCol.length === 4) {
