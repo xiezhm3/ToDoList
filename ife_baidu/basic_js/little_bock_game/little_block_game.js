@@ -3,9 +3,10 @@
 
     var tableBody = document.querySelector(".ws-table-body");
     // init the direction of the little block
-    var to = "top";
+    var to = "";
 
     var init = function () {
+        to = "top";
         tableBody.innerHTML = "";
         for (var i = 1; i < 11; i++) {
             var tr = document.createElement("tr");
@@ -21,12 +22,11 @@
 
     var go = function () {
         var block = document.querySelector(".ws-little-block");
-        var parentNode = block.parentNode.id;
+        var parentId = block.parentNode.id;
         var col = 0;
         var row = 0;
-        var rowCol = parentNode.substring(2);
+        var rowCol = parentId.substring(2);
         console.log(rowCol);
-        //  TODO
         if (rowCol.length === 4) {
             col = 10;
             row = 10;
@@ -42,16 +42,30 @@
             row = parseInt(rowCol[0]);
             col = parseInt(rowCol[1]);
         }
+
         if (to === "top") {
             row = row - 1;
+            if(row === 0) {
+                row = 10;
+            }
+
         } else if (to === "bottom") {
             row = row + 1;
+            if (row === 11) {
+                row = 1;
+            }
         } else if (to === "left") {
             col = col - 1;
+            if (col === 0) {
+                col = 10;
+            }
         } else if (to === "right") {
             col = col + 1;
+            if (row === 11) {
+                row = 1;
+            }
         }
-        var parent = document.querySelector("#" + parentNode);
+        var parent = document.querySelector("#" + parentId);
         parent.className = "";
         var newParent = document.querySelector("#td" + row + col);
         newParent.innerHTML = block.parentNode.innerHTML;
@@ -60,7 +74,30 @@
     };
 
     var left = function () {
-
+        var block = document.querySelector(".ws-little-block");
+        var parentNode = block.parentNode.id;
+        if(to === "top") {
+            to = "left";
+            block.style.width = "10px";
+            block.style.height = "40px";
+        } else if(to === "bottom") {
+            to = "right";
+            block.style.width = "10px";
+            block.style.height = "40px";
+            block.style.marginLeft = "30px";
+            block.style.marginTop = "-20px";
+        } else if(to === "left") {
+            to = "bottom";
+            block.style.width = "40px";
+            block.style.height = "10px";
+            block.style.marginTop = "10px"
+        } else {
+            to = "top";
+            block.style.width = "40px";
+            block.style.height = "10px";
+            block.style.marginTop = "-20px";
+            block.style.marginLeft = "0";
+        }
     };
 
     var right = function () {
