@@ -123,7 +123,7 @@
             to = "bottom";
             block.style.width = "40px";
             block.style.height = "10px";
-            block.style.marginTop = "10px"
+            block.style.marginTop = "10px";
             block.style.marginLeft = "0";
         }
     };
@@ -134,7 +134,7 @@
             to = "bottom";
             block.style.width = "40px";
             block.style.height = "10px";
-            block.style.marginTop = "10px"
+            block.style.marginTop = "10px";
             block.style.marginLeft = "0";
         } else if(to === "bottom") {
             to = "top";
@@ -152,7 +152,7 @@
             to = "left";
             block.style.width = "10px";
             block.style.height = "40px";
-            block.style.marginTop = "-20px"
+            block.style.marginTop = "-20px";
             block.style.marginLeft = "0";
         }
     };
@@ -164,8 +164,7 @@
         init();
         var block = document.querySelector("#td55");
         block.className = "ws-table-target";
-        var little_node = "<div class='ws-little-block'></div>";
-        block.innerHTML = little_node;
+        block.innerHTML = "<div class='ws-little-block'></div>"
     }, false);
 
     var btn_go = document.querySelector(".ws-btn-go");
