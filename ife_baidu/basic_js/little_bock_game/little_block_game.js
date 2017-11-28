@@ -21,6 +21,7 @@
     };
 
     var go = function () {
+        console.log(to);
         var block = document.querySelector(".ws-little-block");
         var parentId = block.parentNode.id;
         var col = 0;
@@ -61,8 +62,8 @@
             }
         } else if (to === "right") {
             col = col + 1;
-            if (row === 11) {
-                row = 1;
+            if (col === 11) {
+                col = 1;
             }
         }
         var parent = document.querySelector("#" + parentId);
@@ -75,7 +76,6 @@
 
     var left = function () {
         var block = document.querySelector(".ws-little-block");
-        var parentNode = block.parentNode.id;
         if(to === "top") {
             to = "left";
             block.style.width = "10px";
@@ -101,11 +101,60 @@
     };
 
     var right = function () {
-
+        var block = document.querySelector(".ws-little-block");
+        if(to === "top") {
+            to = "right";
+            block.style.width = "10px";
+            block.style.height = "40px";
+            block.style.marginLeft = "30px";
+            block.style.marginTop = "-20px";
+        } else if(to === "bottom") {
+            to = "left";
+            block.style.width = "10px";
+            block.style.height = "40px";
+            block.style.marginTop = "-20px"
+        } else if(to === "left") {
+            to = "top";
+            block.style.width = "40px";
+            block.style.height = "10px";
+            block.style.marginTop = "-20px";
+            block.style.marginLeft = "0";
+        } else {
+            to = "bottom";
+            block.style.width = "40px";
+            block.style.height = "10px";
+            block.style.marginTop = "10px"
+            block.style.marginLeft = "0";
+        }
     };
 
     var back = function () {
-
+        var block = document.querySelector(".ws-little-block");
+        if(to === "top") {
+            to = "bottom";
+            block.style.width = "40px";
+            block.style.height = "10px";
+            block.style.marginTop = "10px"
+            block.style.marginLeft = "0";
+        } else if(to === "bottom") {
+            to = "top";
+            block.style.width = "40px";
+            block.style.height = "10px";
+            block.style.marginTop = "-20px";
+            block.style.marginLeft = "0";
+        } else if(to === "left") {
+            to = "right";
+            block.style.width = "10px";
+            block.style.height = "40px";
+            block.style.marginLeft = "30px";
+            block.style.marginTop = "-20px";
+        } else if(to === "right"){
+            to = "left";
+            block.style.width = "10px";
+            block.style.height = "40px";
+            block.style.marginTop = "-20px"
+            block.style.marginLeft = "0";
+        }
     };
 
     // add click event to start button
@@ -115,8 +164,8 @@
         init();
         var block = document.querySelector("#td55");
         block.className = "ws-table-target";
-        var node = "<div class='ws-little-block'></div>";
-        block.innerHTML = node;
+        var little_node = "<div class='ws-little-block'></div>";
+        block.innerHTML = little_node;
     }, false);
 
     var btn_go = document.querySelector(".ws-btn-go");
