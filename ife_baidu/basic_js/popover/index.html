@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Popover demo</title>
+    <style>
+        body {
+            margin:0 auto;
+            padding: 0;
+        }
+        .ws-container {
+            width: 100%;
+            height: 100%;
+            margin:0 auto;
+            text-align: center;
+        }
+        .ws-mask {
+            display: none;
+            position: absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            width: 100%;
+            height:1080px;
+            background-color: #4f4f4f;
+            opacity: 0.1;
+            z-index: 1000;
+        }
+        .ws-popover {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1001;
+            cursor: move;
+            width: 900px;
+            height:900px;
+            border-radius: 4px;
+            /*border:1px solid black;*/
+            box-shadow: 10px 10px 50px #4f4f4f;
+        }
+        .ws-popover-page{
+            width: 800px;
+            height: 800px;
+            margin:0 auto;
+        }
+        .ws-popover-page h2 {
+            padding: 5px;
+            margin: 20px;
+            border-bottom: 2px solid black;
+        }
+        .ws-popover-page p {
+            line-height: 800px;
+            font-size: 50px;
+            font-weight: bolder;
+        }
+        .ws-ensure, .ws-cancel, .ws-btn-pop{
+            width: 150px;
+            height: 60px;
+            font-size: 50px;
+            margin-left: 50px;
+            font-weight: bolder;
+            border:none;
+            border-radius: 3px;
+            /*background-color: #43a0ff;*/
+        }
+        .ws-ensure:hover {
+            background-color: #1568ff;
+        }
+        .ws-cancel:hover{
+            background-color:#ed6e52;
+        }
+        .ws-btn-pop {
+            position: absolute;
+            top: 50%;
+            left:50%;
+            width: 250px;
+            transform: translate(-50%, -50%);
+        }
+        .ws-btn-pop:hover {
+            background-color: #4f4f4f;
+        }
+    </style>
+</head>
+<body>
+<div class="ws-container">
+    <div class="ws-mask"></div>
+    <div class="ws-popover">
+        <div class="ws-popover-page">
+            <h2>Title</h2>
+            <p>This is a pop over page</p>
+        </div>
+        <button class="ws-ensure">OK</button>
+        <button class="ws-cancel">NO</button>
+    </div>
+    <button class="ws-btn-pop">Popover</button>
+</div>
+<script type="application/javascript">
+    (function () {
+        "use strict";
+
+        var popBtn = document.querySelector(".ws-btn-pop");
+
+        var popOver = function () {
+            var popover = document.querySelector(".ws-popover");
+            var mask = document.querySelector(".ws-mask");
+            popover.style.display = "block";
+            mask.style.display = "block";
+            popBtn.style.display = "none";
+        };
+
+        var removePopOver = function () {
+            var popover = document.querySelector(".ws-popover");
+            var mask = document.querySelector(".ws-mask");
+            popover.style.display = "none";
+            mask.style.display = "none";
+            popBtn.style.display = "block";
+        };
+
+
+        popBtn.addEventListener("click", function () {
+            popOver();
+        }, false);
+
+        var okBtn = document.querySelector(".ws-ensure");
+        okBtn.addEventListener("click", function () {
+            removePopOver();
+        }, false);
+
+        var noBtn = document.querySelector(".ws-cancel");
+        noBtn.addEventListener("click", function () {
+            removePopOver();
+        }, false);
+
+    })();
+</script>
+</body>
+</html>
