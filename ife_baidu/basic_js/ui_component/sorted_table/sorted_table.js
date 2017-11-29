@@ -5,16 +5,36 @@
 	var addLine = document.querySelector(".ws-btn-add");
 	var removeLine = document.querySelector(".ws-btn-remove");
 
-    var sortableTd = document.querySelectorAll(".ws-sortable");
-    var editableTd = document.querySelectorAll(".ws-editable");
+    var sortableTds = document.querySelectorAll(".ws-sortable");
+    var editableTds = document.querySelectorAll(".ws-editable");
 
     var data = [];
     var row = 3; // init the row number
+
+    var sort = function () {
+
+    };
 
 	var init = function () {
 		for(var i = 0; i < row + 1; i++) {
 			data[i] = [];
 		}
+		// var editableTds = document.querySelectorAll(".ws-editable");
+		if(editableTds) {
+            editableTds.forEach(function (t) {
+		       t.contentEditable = true;
+            });
+        }
+        // var sortableTds = document.querySelectorAll(".ws-sortable");
+		if(sortableTds) {
+		    sortableTds.forEach(function (t) {
+		        var isSortDesc = true;
+		        t.addEventListener("click", function () {
+		            sort(isSortDesc);
+
+                }, false);
+            });
+        }
 	};
 
 	init();
