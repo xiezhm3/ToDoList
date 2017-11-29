@@ -14,6 +14,7 @@
 }
 
 .ws-table {
+    table-layout: fixed;
     padding: 10px;
     margin: 10px auto;
     width: 1024px;
@@ -24,6 +25,8 @@
 }
 
 tr, td {
+    overflow: hidden;
+    white-space:nowrap;
     position: relative;
     font-weight: bolder;
     height: 30px;
