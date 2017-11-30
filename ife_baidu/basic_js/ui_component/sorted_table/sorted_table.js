@@ -12,6 +12,9 @@
 	var row = 3; // init the row number
 
 	var sort = function (col, isSortDesc) {
+		if(row <= 1) {
+			return;
+		}
 		var temp;
 		if (isSortDesc) {
 			for (var i = 1; i < row; i++) {
@@ -61,18 +64,12 @@
 		for (var i = 0; i < row + 1; i++) {
 			data[i] = [];
 		}
-	}
+	};
 
-	var init = function () {
+	// init
+	(function () {
 		setData();
-		// var editableTds = document.querySelectorAll(".ws-editable");
-		// if(editableTds) {
-		//    editableTds.forEach(function (t) {
-		//        t.contentEditable = true;
-		//    });
-		// }
 		setEditable();
-		// var sortableTds = document.querySelectorAll(".ws-sortable");
 		var isSortDesc = true;
 		if (sortableTds) {
 			var i = 0;
@@ -86,9 +83,7 @@
 				}, false);
 			});
 		}
-	};
-
-	init();
+	})();
 
 	var templateOfTr = "<td class='ws-editable'></td><td class='ws-editable'></td><td class='ws-editable'></td><td class='ws-editable'></td><td class='ws-editable'></td>";
 
