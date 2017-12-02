@@ -1,0 +1,1 @@
+Some practices from codewars.com
