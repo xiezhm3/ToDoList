@@ -12,13 +12,16 @@
         }
         function getNum(word){
             var num = "";
-            for(var i = 0; i < word.length; i++) {
-                if(parseInt(word[i])) {
-                    num += word[i];
+            if(word) {
+                for (var i = 0; i < word.length; i++) {
+                    if (parseInt(word[i])) {
+                        num += word[i];
+                    }
                 }
+                console.log(num);
+                return parseInt(num);
             }
-            console.log(num);
-            return parseInt(num);
+            return;
         };
 
         var wordList = words.split(" ");
