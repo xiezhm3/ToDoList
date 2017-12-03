@@ -30,7 +30,7 @@
         return wordList.join(" ");
     }
 
-    console.log(order("is2 Thi1s T4est 3a"));
+    document.write(order("is2 Thi1s T4est 3a") + "</br>");
 
     // best practice in codewars of this Kata
     var bestPractice = function (words) {
@@ -39,5 +39,7 @@
             return a.match(/\d/) - b.match(/\d/); // here is really clever that I never thought.
         }).join(" ");
     };
+
+    document.write(bestPractice("is2 Thi1s T4est 3a"));
 
 })();
