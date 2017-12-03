@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+<body>
+<canvas id="panel" width="400" height="400"></canvas>
+</body>
+<script type="text/javascript">
+    (function () {
+        "use strict";
+        var canvas = document.getElementById('panel');
+        var ctx = canvas.getContext('2d');
+
+        var lightGradient = ctx.createLinearGradient(0, 0, 0, 400); // 亮度渲染
+
+        lightGradient.addColorStop(0, 'rgba(0, 0, 0, 0)');
+        lightGradient.addColorStop(1, 'rgba(0, 0, 0, 1)'); // rgba, a means the opacity which value is 0 to 1.
+
+        function render(color) { // 需要渲染两次
+            ctx.clearRect(0, 0, 400, 400);// 清除画布
+
+            var colorGradient = ctx.createLinearGradient(0, 0, 400, 0); // 颜色渲染
+
+            colorGradient.addColorStop(0, 'rgb(255, 255, 255)');
+            colorGradient.addColorStop(1, color);
+
+            ctx.fillStyle = colorGradient;
+            ctx.fillRect(0, 0, 400, 400);
+
+            ctx.fillStyle = lightGradient;
+            ctx.fillRect(0, 0, 400, 400);
+        }
+        render("blue");
+    })();
+</script>
+</html>
