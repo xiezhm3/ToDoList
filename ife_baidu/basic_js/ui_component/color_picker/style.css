@@ -1,0 +1,196 @@
+@charset "UTF-8";
+
+.ws-container {
+    margin-top: 50px;
+    /*border: 1px solid brown;*/
+    position: relative;
+}
+
+.ws-color-panel {
+    position: relative;
+    float: left;
+    width: 400px;
+    height: 400px;
+    /*border: 1px solid blue;*/
+    /*background-color: black;*/
+    display: inline-block;
+}
+
+.ws-color-panel .ws-panel-btn {
+    position: absolute;
+    top: 0;
+    left: 400px;
+    margin-left: -17px;
+    margin-top: -15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fe0736;
+    cursor: pointer;
+    border: 2px solid #FFFFFF;
+}
+
+.ws-bar-pick {
+    position: relative;
+    float: left;
+    margin-left: 30px;
+    width: 10px;
+    height: 400px;
+    /*border: 1px solid black;*/
+    display: inline-block;
+}
+
+.ws-bar-pick .ws-bar {
+    height: 100%;
+    background: linear-gradient(to bottom, hsl(0, 100%, 50%), hsl(60, 100%, 50%), hsl(120, 100%, 50%), hsl(180, 100%, 50%), hsl(240, 100%, 50%), hsl(300, 100%, 50%), hsl(360, 100%, 50%));
+    border-radius: 20px;
+}
+
+.ws-bar-pick .ws-bar-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    margin-left: -8px;
+    margin-top: -12px;
+    border: 2px solid #FFFFFF;
+    background-color: #fe0736;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.ws-color-number {
+    /*position: relative;*/
+    float: left;
+    /*width: 210px;*/
+    height: 400px;
+    /*border: 1px solid bisque;*/
+    display: inline-block;
+    margin-left: 30px;
+
+}
+
+.ws-color-number .ws-color-rgb, .ws-color-number .ws-color-hsl {
+    width: 100%;
+    height: 50%;
+    /*margin: 3px;*/
+    /*-webkit-box-sizing: border-box;*/
+    /*-moz-box-sizing: border-box;*/
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ws-color-rgb {
+    border-bottom: 1px solid #5a5b5b;
+    padding-bottom: 10px;
+    /*padding-top: -10px;*/
+}
+
+.ws-color-hsl {
+    border-top: 1px solid #5a5b5b;
+    padding-top: 10px;
+}
+
+.ws-text {
+    display: inline-block;
+    text-align: right;
+    height: 20px;
+    line-height: 20px;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-right: 15px;
+    width: 20px;
+}
+
+.ws-selector-wrapper {
+    position: relative;
+    font-size: 20px;
+    height: 55px;
+}
+
+.ws-selector {
+    position: relative;
+    width: 155px;
+    height: 100%;
+    /*margin-top: 10px;*/
+    font-size: 30px;
+    border: 2px solid #9e9e9e;
+    padding-right: 12px;
+    padding-left: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.ws-selector-wrapper .ws-up {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.ws-selector-wrapper .ws-down {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.ws-selector-wrapper .ws-selector-btn {
+    width: 40px;
+    height: 50%;
+    font-size: 14px;
+    border-left: 2px solid #DEDEDE;
+    cursor: pointer;
+    /*background-color: #ededed;*/
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    margin-top: 4px;
+    padding-top: 27px;
+}
+
+.ws-picked-display {
+    position: relative;
+    float: left;
+    width: 200px;
+    height: 400px;
+    display: inline-block;
+    margin-left: 30px;
+    /*border: 1px solid #72b16a;*/
+}
+
+.ws-color-display {
+    width: 100%;
+    height: 200px;
+    background-color: #fe0736;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.ws-value-copy {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.ws-value-content {
+    height: 30px;
+    line-height: 30px;  
+    font-size: 16px;
+    text-align: left;
+}
+
+.ws-copy-btn {
+    float: right;
+    background-color: #1568ff;
+    height: 30px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 3px;
+    color: #FFFFFF;
+}

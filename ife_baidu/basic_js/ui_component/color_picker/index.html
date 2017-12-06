@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>UI组件之色彩选择器</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 <div class="ws-container">
@@ -82,12 +83,22 @@
     </div>
     <div class="ws-picked-display">
         <div class="ws-color-display"></div>
-        <div class="ws-color-copy">
-            <div></div>
-            <div></div>
-            <div></div>
+        <div class="ws-value-copy">
+            <div class="ws-value-content">
+                <span class="ws-value" id="rgb"></span>
+                <span class="ws-copy-btn" id = "ws-rgb-btn" data-clipboard-target="#rgb">Copy</span>
+            </div>
+            <div class="ws-value-content">
+                <span class="ws-value" id="hsl"></span>
+                <span class="ws-copy-btn" id = "ws-hsl-btn" data-clipboard-target="#hsl">Copy</span>
+            </div>
+            <div class="ws-value-content">
+                <span class="ws-value" id="hsv"></span>
+                <span class="ws-copy-btn" id="ws-hsv-btn" data-clipboard-target="#hsv">Copy</span>
+            </div>
         </div>
     </div>
 </div>
+<srcipt src="//cdn.bootcss.com/clipboard.js/1.6.1/clipboard.min.js"></srcipt>
 </body>
 </html>
