@@ -5,6 +5,89 @@
     <title>UI组件之色彩选择器</title>
 </head>
 <body>
-<script></script>
+<div class="ws-container">
+    <div class="ws-color-panel">
+        <canvas class="ws-canvas" height="400" width="400"></canvas>
+        <div class="ws-panel-btn"></div>
+    </div>
+    <div class="ws-bar-pick">
+        <div class="ws-bar"></div>
+        <div class="ws-bar-btn"></div>
+    </div>
+    <div class="ws-color-number">
+        <div class="ws-color-rgb">
+            <div class="ws-selector-wrapper">
+                <span class="ws-text">R</span>
+                <input class="ws-selector" value="255">
+                <div class="ws-up ws-selector-btn">
+                    <i class="ws-fa ws-fa-caret-up"></i>
+                </div>
+                <div class="ws-down ws-selector-btn">
+                    <i class="ws-fa ws-fa-caret-down"></i>
+                </div>
+            </div>
+            <div class="ws-selector-wrapper">
+                <span class="ws-text">G</span>
+                <input class="ws-selector" value="0">
+                <div class="ws-up ws-selector-btn">
+                    <i class="ws-fa ws-fa-caret-up"></i>
+                </div>
+                <div class="ws-down ws-selector-btn">
+                    <i class="ws-fa ws-fa-caret-down"></i>
+                </div>
+            </div>
+            <div class="ws-selector-wrapper">
+                <span class="ws-text">B</span>
+                <input class="ws-selector" value="0">
+                <div class="ws-up ws-selector-btn">
+                    <i class="ws-fa ws-fa-caret-up"></i>
+                </div>
+                <div class="ws-down ws-selector-btn">
+                    <i class="ws-fa ws-fa-caret-down"></i>
+                </div>
+            </div>
+        </div>
+        <div class="ws-color-hsl">
+            <div class="ws-selector-wrapper">
+                <span class="ws-text">H</span>
+                <input class="ws-selector" value="1">
+                <div class="ws-up ws-selector-btn">
+                    <i class="ws-fa ws-fa-caret-up"></i>
+                </div>
+                <div class="ws-down ws-selector-btn">
+                    <i class="ws-fa ws-fa-caret-down"></i>
+                </div>
+            </div>
+            <div class="ws-selector-wrapper">
+                <span class="ws-text">S</span>
+                <input class="ws-selector" value="1">
+                <div class="ws-up ws-selector-btn">
+                    <i class="ws-fa ws-fa-caret-up"></i>
+                </div>
+                <div class="ws-down ws-selector-btn">
+                    <i class="ws-fa ws-fa-caret-down"></i>
+                </div>
+            </div>
+            <div class="ws-selector-wrapper">
+                <span class="ws-text">L</span>
+                <input class="ws-selector" value="1">
+                <div class="ws-up ws-selector-btn">
+                    <i class="ws-fa ws-fa-caret-up"></i>
+                </div>
+                <div class="ws-down ws-selector-btn">
+                    <i class="ws-fa ws-fa-caret-down"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ws-picked-display">
+        <div class="ws-color-display"></div>
+        <div class="ws-color-copy">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
