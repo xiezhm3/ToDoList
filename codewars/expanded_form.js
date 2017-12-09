@@ -28,19 +28,22 @@
     var expandedForm02 = function (num) {
         var numSplit = num.toString().split(".");
         var numList = [];
-        for(var i = 0; i < numSplit.length; i++) {
-            if(i === 0) {
+        for (var i = 0; i < numSplit.length; i++) {
+
+            if (numSplit[i] === "0") {
+                continue;
+            }
+
+            if (i === 0) {
                 var intStr = numSplit[0];
-                if(intStr === "0"){
-                    continue;
-                }
+
                 var lenInt = intStr.length;
-                for(var k in intStr) {
+                for (var k in intStr) {
                     var multiply = "";
                     for (var j = 0; j < lenInt - 1; j++) {
                         multiply += "0";
                     }
-                    if (intStr[k] != 0) {
+                    if (intStr[k] !== "0") {
                         numList.push(intStr[k] + multiply);
                     }
                     lenInt = lenInt - 1;
@@ -48,12 +51,18 @@
 
             } else {
                 var decimal = numSplit[i];
-                if(decimal === "0") {
-                    continue;
-                }
                 var lenDecimal = decimal.length;
-
+                var fm = 1;
+                for (var l = 0; l < lenDecimal; l++) {
+                    fm *= 10;
+                    if (decimal[l] !== "0") {
+                        numList.push(decimal[l] + "/" + fm);
+                    }
+                }
             }
         }
+        return numList.join(" + ");
     };
+
+    document.write(expandedForm02(0.04));
 })();
